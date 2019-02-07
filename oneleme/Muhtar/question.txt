@@ -1,0 +1,46 @@
+Bir köyde "Demir"ler ve "Dunno"lar adlý iki büyük aile bulunmaktadýr.
+Bu köye muhtar seçilmek isteyen kiþi iki tarafada olabildigince eþit uzaklýkta bulunmak istemektedir.
+Verilen ilk array Demir ailesinin bireylerinin nüfuzu.
+Verilen ikinci array Dunno ailesinin bireylerinin nüfusu "evlerdeki"
+Verilen 3. array Demir ailesinin zenginlikleri by index
+Verilen 4. array Dunno ailesinin zenginlikleri  by index
+
+
+Ailelerin muhtara yardým edebilme seviyeleri, O evdeki kiþi sayýsý ve o eve gelen
+para miktarýnýn çarpýmýdýr.
+
+Muhtarýn hangi yardým seviyesinde durmasý gerektigine karar verin.
+
+-------------------------------------
+Köye muhtar seçilmek isteyen kiþi politik iki uclu scalada(A-B) alabileceði yardýma
+olabildigince eþit uzaklýkta bulunmak istemektedir.
+Verilen ilk array A bölgesinde olan ailelerin nüfusu.
+Verilen ikinci array B bölgesinde olan ailelerin nüfusu 
+Verilen 3. array A bölgesinde olan ailelerin dereceleri by index
+Verilen 4. array B bölgesinde olan  ailelerin dereceleri by index
+Ailelerin scalada olacaðý yer o ailedeki nüfus*ailenin derecesidir.
+
+5 kiþilik ailesi bulunan muhtarýn diðer ailelere toplamda en az uzaklýkta bulunmasý için
+muhtarýn ailesinin derecesini bulunuz
+------------------------------------------------Bunu seçtik
+Bir köyde "Bunno"ler ve "Dunno"lar adlý iki büyük aile bulunmaktadýr.
+Bu köye muhtar seçilmek isteyen kiþi iki tarafada olabildigince (yardým seviyesinde)
+eþit uzaklýkta bulunmak istemektedir.
+Verilen ilk array Bunno ailesinin bireylerinin nüfusu
+Verilen ikinci array Dunno ailesinin bireylerinin nüfusu "evlerdeki"
+Verilen 3. array Bunno ailesinin zenginlikleri by index
+Verilen 4. array Dunno ailesinin zenginlikleri  by index
+
+
+Ailelerin muhtara yardým edebilme seviyeleri, O evdeki kiþi sayýsý ve o eve gelen
+para miktarýnýn çarpýmýdýr.
+
+Muhtar bulunacaðý yardým seviyesine(daha anlamlý birþey lazým düþünüyorum) göre
+yardým seviyelerinin 1 standard sapma uzaklýgýna kadar en çok bulunan aileye göre 
+köye yapýlacak fabrikaya "Evet" ya da "Hayýr diyecektir.Bunno ailesi Evet
+Dunno ailesi Hayýrý desteklemektedir.
+Muhtarýn bulunacaðý yardým seviyesini ve vereceði cevabý bulunuz.
+
+
+
+
