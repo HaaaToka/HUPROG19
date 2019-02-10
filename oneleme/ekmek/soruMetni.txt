@@ -1,0 +1,42 @@
+
+Kayra ve Asya iki kardeştir. Bir sabah kahvaltı yapıcakları sırada anneleri evde ekmek olmadığını fark ediyor. Kayra ve
+Asya'ya biriniz ekmeğe gitsin diyor. Kardeşler ekmek almaya kimin gideceğine karar vermek için kendi geliştirdikleri
+oynunu oynarak belirliyorlar. \n\n
+
+Aralarında N tane oyun oynamaktadırlar. Oyun B bölümden oluşmakta. Oyun sırayla oynanmaktadır ve 1. bölümden başlayıp N. bölüme kadardır.
+Her oyuncu kendi sırasında maksimum M bölüm oynama hakkına sahiptir. N'inci bölümü oynayan oyunu kaybetmektedir.
+En az oyun kazanan ekmeğe gider. Kimin ekmeğe gideceğini bulalım.\n
+İki kardeşte oyunu optimal oynamaktadır ve oynadıkları her bölümü geçmektedirler.
+
+input Formatı:
+İlk satırda N oyun sayısı. \n
+Takip eden N satırda bölüm sayısı B, maksimum oynananabilecek bölüm sayısı M ve oyuna kimin başlayacağı K ya da A. \n
+
+output format:
+Ekmeğe gidecek kardeşin ismi. Ekmeğe tek bir kardeş gider. Asya ya da Kayra.
+
+Constrains
+1<N,B<10^9
+1<M<B
+
+
+Sample Input1:
+2 \n
+3 2 K \n
+5 1 A \n
+
+Sample Output1:
+Asya
+
+Explanation1:
+1.Oyun
+Bölümler -> 1 2 3
+Kim Oynadı->K K A
+İlk oyunu Asya kaybetti
+
+2.Oyun
+Bölümler -> 1 2 3 4 5
+Kim Oynadı->A K A K A
+İkinci oyunu Aya kaybetti.
+
+Asya:0 Kayra:2 olarak ekmeğe Asya gidecektir.
