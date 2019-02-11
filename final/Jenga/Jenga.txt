@@ -1,0 +1,16 @@
+A ve B cafe'de bir masaya oturuyorlar ve masada önceden oturanların bıraktığı yarım kalmış Jenga oyununu görüyorlar.
+Yarım oyunu bitirmeye karar veren ikili oyunu hızlı bitirmek için aldığı taşları geri koymuyor. A bir blok çekiyor ve başlıyorlar. İkisinin de optimum hamleleri yaptığı
+düşünülürse hangisinin oyunu kazanacağını bulun.
+
+Bloklar gerçek Jenga'nın aksine tamamen eşit boyutta, hiçbir blokta sıkışma yok.
+--------------------------------------------------------
+Input:
+Ilk satır N sıra uzunluğu
+Sonraki N satır:
+	3 karaketer, "-" orada blok olduğunu " " ise boş olduğunu gösterir.
+
+N < 10^9
+
+---------------------------------------------------------
+Ouput:
+Print "A" or "B"
