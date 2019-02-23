@@ -1,0 +1,58 @@
+instagramda gezinmekten sıkılan  Okan ve Batu <3 biraz eğlenmek yeni bir şey ararlar.
+Sonunda rastgele arkadaş listesinden seçtikleri kişilerin isim ve soyisimlerini ascii tablosunu kullanarak sayısal hale geçirirler.
+Sayısal forma gelen isimleri koordinat sisteminde karşılık gelen yere koyarlar.(isim->x, soyisim->y)
+Her ekledikleri isimden sonra koordinat sistemi üzerinde birbirine harfsel olarak en uzak 2 ismi bulurlar.
+Harfsel uzaklığı şu formulu kullanarak buluyorlar: |x1 - x2| + | y1 - y2 | .
+Okan ve Batu'ya bu konuda biraz yardımcı olmaya ne dersin?
+
+Okan ve Batu, her zaman ilk olarak ikisinin beraber en sevdikleri arkadaş olan "ata mert"i yerleştirler.
+
+input Formatı:
+İlk satırda Okan ve Batu'nun toplam arkadaş sayısı N veriliyor \n
+takip eden N satırda ise arkdaşlarının boşluk ile ayrılmış isim ve soyisimleri gelmekte(isim ve soyisimler ingiliz alfabesinden tamamı küçük harftir) \n
+
+output format:
+Her yeni arkadaş koordinat sistemine eklendiğinde harfsel olarak en uzak iki kişinin harfsel uzaklığı bastırılacaktır.
+
+Constrains
+1<=N<=100000
+1< isim ve soyisim uzunlukları <100000
+
+
+Sample Input1:
+4
+o guz
+bar an
+ay ca
+bil ge
+
+Sample Output1:
+297
+336
+338
+338
+
+Explanation1:
+
+ata mert -> (310 440) baslangıç olarak koordinat sistemine "ata mert"i ekliyoruz
+
+1) o guz -> (111 342)
+Şuan sadece 2 isim olduğundan maksimum harfsel uzaklık: | 310-111 |+| 440-342 | = 199+98 = 297
+
+2)bar an -> (309 207)
+"bar an" ve "ata mert" için harfsel uzaklık -> | 309-310 | + | 207-440 | = 1+133 = 134
+"bar an" ve "o guz" için harfsel uzaklık -> | 309-111 | + | 207-342 | = 198+135 = 333
+"ata mert", "o guz", "bar an" arasından harsel olarak en uzak ikisi "bar an" ve "o guz".
+
+3) ay ca -> (218 196)
+"ay ca" ve "ata mert" için harfsel uzaklık -> | 218-310 | + | 196-440 | = 92+244= 336
+"ay ca" ve "o guz" için harfsel uzaklık -> | 218-111 | + | 196-342 | = 117+146 = 263
+"ay ca" ve "bar an" için harfsel uzaklık -> | 218-309 | + | 196-207 | = 91+11 = 103
+4 kişi arasında harfsel olarak en uzak 2 kişi "ay ca" ve "ata mert"
+
+4) bil ge -> (311 204)
+"bil ge" ve "ata mert" için harfsel uzaklık -> | 311-310 | + | 204-440 | = 1+236= 237
+"bil ge" ve "o guz" için harfsel uzaklık -> | 311-111 | + | 204-342 | = 200+138= 338
+"bil ge" ve "bar an" için harfsel uzaklık -> | 311-309 | + | 204-207 | = 2+3= 5
+"bil ge" ve "ay ca" için harfsel uzaklık -> | 311-218 | + | 204-196 | = 93+8= 101
+5 kişi arasında harfsel olarak en uzak 2 kişi "bil ge" ve "o guz"
