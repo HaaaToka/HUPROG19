@@ -68,7 +68,7 @@ def solution():
 
     global ans,P,U,L
 
-    while(P.__len__()>1):
+    while(len(P)>1):
 
         size=len(P)
         tmp=P[:]
@@ -95,7 +95,7 @@ def solution():
             count-=1
             P.pop()
 
-        print(U,"\n",L,"\n")
+        #print(U,"\n",L,"\n")
 
 
 

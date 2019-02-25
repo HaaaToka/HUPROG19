@@ -1,6 +1,4 @@
-from collections import defaultdict,Counter
 from operator import itemgetter
-
 
 n=int(input())
 P=[]
@@ -16,19 +14,20 @@ def makeconvex(P):
 
     sz=len(P)
     for i in range(sz):
-        while ( (len(U)>=2) and (cross(U[len(U)-2],U[len(U)-1],P[i])<=0) ):
+        while ( (len(U)>=2) and (cross(U[-2],U[-1],P[i])<=0) ):
             U.pop()
         U.append(P[i])
 
     for i in range(sz):
-        while ( (len(L)>=2) and (cross(L[len(L)-2],L[len(L)-1],P[i])>=0) ):
+        while ( (len(L)>=2) and (cross(L[-2],L[-1],P[i])>=0) ):
             L.pop()
         L.append(P[i])
 
-def dist(p1,p2):
+def nefretSeviyesi(p1,p2):
     return abs(p1[0]-p2[0])+ abs(p1[1]-p2[1])
 
-def GetMaxPair():
+def nefretKolik():
+    #birbirinden encok nefret eden 2 kisiyi buluyoz
 
     global U,L
     ans=0
@@ -41,7 +40,7 @@ def GetMaxPair():
 
     while j>0 or i<sizeU-1:
 
-        tmpdist = dist(U[i],L[j])
+        tmpdist = nefretSeviyesi(U[i],L[j])
         #print(tmpdist,i,j)
         if tmpdist>ans:
             P=i
@@ -65,7 +64,7 @@ def solution():
 
     global ans
 
-    while(P.__len__()>1):
+    while(len(P)>1):
 
         size=len(P)
         tmp=P[:]
@@ -74,13 +73,13 @@ def solution():
         makeconvex(tmp)
         #print(U,"\n",L)
 
-        res = GetMaxPair()
+        res = nefretKolik()
         #print(res)
 
         maxx=max(res)
         #print(maxx)
 
-        disT=dist(P[res[0]-1],P[res[1]-1])
+        disT=nefretSeviyesi(P[res[0]-1],P[res[1]-1])
         #print(disT,"<<<----")
 
         for i in range(maxx,size+1):
@@ -95,19 +94,11 @@ def solution():
         #print(U,"\n",L,"\n")
 
 
-    #print(0)
     for i in ans[2:n+2]:
         print(i)
 
 
 def main():
-
-    """P.append([10,10,1])
-    for i in range(2,n+2):
-        x,y=map(int,input().strip().split())
-        P.append([x,y,i])
-
-    solution()"""
 
 
     P.append([310,440,1]) #ata mert -> 310 440
@@ -130,11 +121,11 @@ if __name__ == '__main__':
 
 """
 
-5
-ata mert
+4
 o guz
 bar an
 ay ca
 bil ge
+
 
 """
