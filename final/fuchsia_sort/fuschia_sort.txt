@@ -1,0 +1,48 @@
+Fuşya oynadığı n boyutundaki diziye pati atarak dizideki bazı sayıları etrafa saçmıştır. Fuşya çok meraklı bir kedidir ve etrafa dağıttığı sayıların yerine
+koyup koyamayacağını merak eder. Fuşya orijinal dizideki her k boyutundaki ardışık altdizilerin toplamlarını bilmektedir. Fuşya aynı zamanda çok şanslı bir kedidir
+çünkü diziyi k boyutundaki parçalara bölmeye çalıştığında etrafa saçılmayan sayıların indexlerinin (her bir parçanın ilk elemanını 1. index olarak alınınca)
+birbirinden farklı olduğunu gözlemlemiştir.
+Fuşyanın oynadığı diziyi tekrar kurmasına yardımcı olun.
+
+Input Formatı:
+ilk satır iki adet tam sayı n, k değerlerini bulunduruyor.
+İkinci satır artan sıradaki ardışık altdizilerin toplamlarını bulunduruyor.
+Devam eden k - 1 satır ise Fuşyanın bildiği sayıları index, sayı şekleinde bulundurmakta.
+
+Output Formatı:
+Tek satıra n elemanlı çıktı dizisini bastırın.
+
+Constraints:
+1 < k < 10 ^ 3
+k < n < 10 ^ 9
+
+Sample Input:
+
+10 3
+3 4 7 9 12 16 21 27
+9 8
+5 4
+
+Sample Output:
+
+1 1 1 2 4 3 5 8 8 11
+
+Açıklama:
+
+diziyi k boyutundaki parçalara bölmeye çalıştığımızda oluşan dizi aşağıdaki gibidir:
+
+. . . | . 4 . | . . 8 | .
+
+Yukarıdaki satırda 5. indexteki 4 ve 9. indexteki 8 sayıları fuşyanın patisiyle dağılmayan sayılardır.
+diziyi 3 lü parçalara böldüğümüzde 4'ün 2. indexde ve 8'in 3. indexte olduğunu ve bütün durumlar için bu indexlerin birbirinden farklı olduğunu biliyoruz.
+Çıktı arrayi şu şekilde olmalıdır:
+
+1 1 1 2 4 3 5 8 8 11
+
+3'lü ardışık altdizilerin toplamlarının sırasıyla verilen toplam dizisindeki elemanlara eşit olmalı.
+1 + 1 + 1 = 3
+1 + 1 + 2 = 4
+1 + 2 + 4 = 7
+2 + 4 + 3 = 9
+.
+.
