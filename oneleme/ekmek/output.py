@@ -26,8 +26,8 @@ for inp in inputs:
                 kazanan["K"] += 1
 
     if (kazanan["K"] < kazanan["A"]):
-        print("Kayra",file=out)
+        print("Kayra",kazanan["K"],file=out)
     elif (kazanan["K"] > kazanan["A"]):
-        print("Asya",file=out)
+        print("Asya",kazanan["A"],file=out)
     else:
         print("AAAAAAAAAAAAAAAAAAAAAA")

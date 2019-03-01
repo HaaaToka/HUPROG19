@@ -2,7 +2,7 @@ from random import randint
 from time import time
 a=time()
 
-testcase=10
+testcase=20
 
 for i in range(testcase):
     print("input ",i," gecen sure", time()-a)

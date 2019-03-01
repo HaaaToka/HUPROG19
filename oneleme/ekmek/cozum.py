@@ -15,9 +15,9 @@ for _ in range(N):
             kazanan["K"]+=1
 
 if(kazanan["K"]<kazanan["A"]):
-    print("Kayra")
+    print("Kayra",kazanan["K"])
 else:
-    print("Asya")
+    print("Asya",kazanan["A"])
 
 
 """
