@@ -26,9 +26,10 @@ Alacağı bilgisayarın sıralamadaki yeri.
 Constrains
 1<=N<=10^3 <br>
 1<=M<=10^3 <br>
-1<=K<=10^5 <br>
-1<=P<=10^6 <br>
-1<=X<=10^4 <br>
+1<=M_i<10^2 <br>
+1<=K<=10^2 <br>
+1<=P<=10^3 <br>
+1<=X<=10^6 <br>
 
 
 Sample Input1:
