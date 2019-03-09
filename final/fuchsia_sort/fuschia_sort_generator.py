@@ -3,7 +3,7 @@ from fuschia_sort_sol import fuchsia_sort
 
 
 def prng(n, exclude):
-    choices = [x for x in range(n) if x not in exclude]
+    choices = [x for x in range(1, n + 1) if x not in exclude]
     return rd.choice(choices)
 
 input_sizes = [10, 100, 100, 100, 100, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**5, 10**5, 10**5, 10**6, 10**6]
@@ -21,11 +21,16 @@ for i in range(30):
     known_nums = []
     for _ in range(k - 1):
         choice = prng(n, chosen)
-        ind = choice % k
+        ind = (choice - 1) % k
         for j in range(ind, n, k):
-            chosen.add(ind)
+            chosen.add(j + 1)
+        for j in range (ind, -1, -k):
+            chosen.add(j + 1)
         number = rd.randint(k, 1000)
-        print(choice, number, file=fin)
+        if _ == k - 2:
+            print(choice, number, file=fin, end="")
+        else:
+            print(choice, number, file=fin)
         known_nums.append((choice, number))
     out_arr = fuchsia_sort(n, k, sums, known_nums)
     print(*out_arr, sep=" ", file=fout)
