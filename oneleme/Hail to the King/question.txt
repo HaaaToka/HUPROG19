@@ -1,0 +1,51 @@
+Bir konsere hem Led Zeppelin hemde Eminem katýlýr.<br>
+Bu konsere gidecek insanlar kendini Led zeppelin faný ve Eminem faný olarak adlandýrýr.<br>
+
+Her grubun faný ayný zamanda diðer grubu da sevmektedir.<br>
+1. array Led Zeppelin fanlarýnýn Led Zeppelin sevme seviyesi<br>
+2. array Led Zeppelin fanlarýnýn Eminem sevme seviyesi<br>
+3. array Eminem fanlarýnýn Led Zeppelin sevme seviyesi<br>
+4. array Eminem fanlarýnýn Eminem sevme seviyesi<br>
+
+Bu konsere katýlan insanlarýn metali ne kadar sevdigi belirlenecektir.<br>
+Bir fanýn Metal scalasýndaki seviyesi aþaðýdaki formüle göre hesaplanýr.<br>
+Led Zeppelin sevme seviyesi * 7 + Eminem sevme seviyesisi * 3<br>
+
+Okan scaladaki yerinin konsere katýlan insanlarýn scaladaki yerlerine olan uzaklýðýnýn toplamda en az olmasýný istemektedir.(Uzaklýk iki insansanýn scaladaki pozisyonlarýnýn farklarýnýn pozitif halidir)<br>
+
+Okan kendine kafa arkadaþlar aramaktadýr.Bu yüzden skalada kendine K birim uzaklýktaki insanlarla tanýþýr. Okan'ýn kaç tane Led Zeppelin faný arkadaþý oldugunu bulunuz.Okan birden fazla minimum uzaklýk olduðu durumda skalada en çok Led Zeppelin fanýnýn olduðu yerde olmak ister.Okan minimum uzaklýkta birden fazla en çok Led Zeppelin faný olduðu durumda en düþük metal sevme deðeri alýr.
+
+
+
+Input Format:
+Ilk satýr N doðal sayýsý ve K uzaklýk tam sayýsý verilir.<br>
+Sonraki dört satýr N boyutundaki sayý dizileri sýrasýyla:<br>
+1. array Led Zeppelin fanlarýnýn Led Zeppelin sevme seviyesi<br>
+2. array Led Zeppelin fanlarýnýn Eminem sevme seviyesi<br>
+3. array Eminem fanlarýnýn Led Zeppelin sevme seviyesi<br>
+4. array Eminem fanlarýnýn Eminem sevme seviyesi<br>
+
+Constraints:
+0 < N <= 10**5<br>
+3 < K <= 10<br>
+0 < Sevme seviyesi <= 100
+
+Output Format:
+Ýlk satýra Okanýn scaladaki yerini,<br>
+Ýkinci satýra Okan'ýn kaç tane Led Zeppelin faný arkadaþý olduðunu yazdýrýn.
+
+Exp:
+4 4 15
+1 3 2 2
+1 4 7 3
+5 4 8 4
+7 6 8 10
+
+
+Output:
+35
+3
+
+
+
+
