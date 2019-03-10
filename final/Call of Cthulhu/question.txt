@@ -1,0 +1,37 @@
+Dexter ayný anda birden fazla iþ yapmayý çok sevdigi için kardeþiyle konuþtuðu sýrada kardeþinin söyledigi kelimeyi sayýlara çevirmektedir.<br>
+Bu iþlemi þu þekilde yapar.<br>
+Kelimedeki her farklý *L* alt kelimeye iki deðer atar.<br>
+L alt kelimeninin ilk deðeri A, ana kelimede tekrar ettiði her kýsýmdaki orta deðerlerin toplamýdýr.<br>
+Orta deðerler l,r (l 1'den baþlayarak, r >= l) alt kelimesi için l+floor((r-l)/2).<br>
+L alt kelimesinin ikinci deðeri B, ana kelimede tekrar etme sayýsýdýr.<br><br>
+
+Dexter alt kelimelerin B deðerini yazdýrmak istemektedir.Bunun için 2 kural vardýr.<br>
+Ýlk kural i0,i1,...in-1 için her B deðerinin A deðeri kendinden öncekinin A deðerinden büyük olmak zorundadýr.<br>
+Ýkinci kural arda arda gelen ayný B deðerleri tek B deðerine düþürebilir.<br><br>
+
+Dexter'a bu özellikleri taþýyan en küçük sýkýþtýrýlmýþ sayýya yazdýrmasýna yardýmcý olun.
+
+Input format:
+Ýlk satýr için bir adet doðal sayý n
+0 <= n <= 400
+
+
+Örnek:
+
+input:
+3
+aba
+
+output:
+21
+
+
+Exp:
+Alt kelime: a Orta deðerlerinin toplamý: 2 (Orta deðerler:[(0,0), (2,2)]) Tekrar sayýsý: 2
+Alt kelime: ba, Orta deðerlerinin toplamý: 2 (Orta deðerler:[(1,2)]), Tekrar sayýsý: 1
+Alt kelime: ab, Orta deðerlerinin toplamý: 1 (Orta deðerler:[(0,1)]), Tekrar sayýsý: 1
+Alt kelime: aba, Orta deðerlerinin toplamý: 1 (Orta deðerler:[(0,2)]), Tekrar sayýsý: 1
+Alt kelime: b, Orta deðerlerinin toplamý: 1 (Orta deðerler:[(1,1))]), Tekrar sayýsý: 1
+
+Sýkýþtýrýlmýþ iþleminden önce  önce: 21111
+Sýkýþtýrýlmýþ isleminden sonra 21
