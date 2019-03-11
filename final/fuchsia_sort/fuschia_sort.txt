@@ -1,18 +1,22 @@
-Fuşya oynadığı n boyutundaki diziye pati atarak dizideki bazı sayıları etrafa saçmıştır. Fuşya çok meraklı bir kedidir ve etrafa dağıttığı sayıları yerine koyup koyamayacağını merak eder. Fuşya orijinal dizideki her k boyutundaki ardışık altdizilerin toplamlarını bilmektedir. Fuşya aynı zamanda çok şanslı bir kedidir çünkü diziyi k boyutundaki parçalara bölmeye çalıştığında etrafa saçılmayan sayıların indexlerinin (her bir parçanın ilk elemanını 0. index olarak alınınca) birbirinden farklı olduğunu gözlemlemiştir.<br>
-Fuşyanın oynadığı diziyi tekrar kurmasına yardımcı olun.
+Fuşya oynadığı **n** elemanlı A dizisine pati atarak dizideki bazı sayıları etrafa saçmıştır. Fuşya çok meraklı bir kedidir ve etrafa dağıttığı sayıları yerine koyup koyamayacağını merak eder. Fuşya A dizisindeki her k boyutundaki ardışık altdizilerin toplamlarını bulunduran **m** boyutundaki S dizisini bilmektedir. Fuşya aynı zamanda çok şanslı bir kedidir çünkü diziyi **k** boyutundaki parçalara bölmeye çalıştığında etrafa saçılmayan sayıların indexlerinin (her bir parçanın ilk elemanını 0. index olarak alınınca n/k adet altdizi oluşur, oluşan parçalar aşağıdaki şekilde gözükmektedir.) birbirinden farklı olduğunu gözlemlemiştir.<br>
+
+Fuşyanın oynadığı A dizisini tekrar kurmasına yardımcı olun.
+
 
 Input Formatı:
-ilk satır iki adet tam sayı n, k değerlerini bulunduruyor. <br>
-İkinci satır ardışık altdizilerin toplamlarını, s dizisini bulunduruyor. <br>
+ilk satır iki adet tam sayı n, m, k değerlerini bulunduruyor. <br>
+İkinci satır ardışık altdizilerin toplamlarını, S dizisini bulunduruyor. <br>
 Devam eden k - 1 satır ise Fuşyanın bildiği sayıları index sayı şeklinde bulundurmakta.
 
 Output Formatı:
-Tek satıra n elemanlı çıktı dizisini bastırın.
+N boyutundaki a dizisini boşluklar ile ayırarak bastırın.
 
 Constraints:
 1 < k < 10 ^ 3 <br>
-k < n < 10 ^ 6 <br>
+1 < n < 10 ^ 6 <br>
+1 <= m < n <br>
 1 <= i <= n<br>
+-10 ^ 6 <= a[i] <= 10 ^ 6<br>
 1 < s[i] < 10 ^ 3
 
 Sample Input:
@@ -28,7 +32,7 @@ N boyutundaki Fuşya'nın dizisini boşluklar ile ayırarak bastırın.
 
 Açıklama:
 
-diziyi k boyutundaki parçalara bölmeye çalıştığımızda oluşan dizi aşağıdaki gibidir:
+Diziyi k boyutundaki parçalara bölmeye çalıştığımızda oluşan dizi aşağıdaki gibidir:
 
 . . . | . 4 . | . . 8 | .
 
@@ -38,10 +42,11 @@ diziyi 3 lü parçalara böldüğümüzde 4'ün 2. indexde ve 8'in 3. indexte ol
 
 1 1 1 2 4 3 5 8 8 11
 
-3'lü ardışık altdizilerin toplamlarının sırasıyla verilen toplam dizisindeki elemanlara eşit olmalı.
-1 + 1 + 1 = 3
-1 + 1 + 2 = 4
-1 + 2 + 4 = 7
-2 + 4 + 3 = 9
-.
-.
+3'lü ardışık altdizilerin toplamlarının sırasıyla verilen toplam dizisindeki elemanlara eşit olmalı.<br>
+1 + 1 + 1 = 3<br>
+1 + 1 + 2 = 4<br>
+1 + 2 + 4 = 7<br>
+2 + 4 + 3 = 9<br>
+.<br>
+.<br>
+8 + 8 + 11 = 27
