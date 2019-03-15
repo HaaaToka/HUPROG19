@@ -18,7 +18,7 @@ for idx, pc in enumerate(pcs):
 
     for i in range(1,len(pc)):
 
-        if i + k > minimum:
+        if abs(pc[i]-minimum)>k:
             pc[i] = minimum+k
 
     pow_sum = sum(pc) - fare

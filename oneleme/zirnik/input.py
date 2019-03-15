@@ -2,12 +2,12 @@ import random as rd
 
 """
 
-1<=N<=10^3 <br>
-1<=M<=10^3 <br>
-1<=M_i<10^2 <br>
-1<=K<=10^2 <br>
-1<=P<=10^3 <br>
-1<=X<=10^6 <br>
+1 <= N <= 10^3 <br>
+1 <= M <= 10^3 <br>
+1 <= M_i <= 10^2 <br>
+1 <= K <= 10^2 <br>
+1 <= P <= 10^5 <br>
+1 <= X <= 10^6 <br>
 
 """
 
@@ -22,7 +22,7 @@ for i in range(testcase):
             n=rd.randint(1,10)
             m=rd.randint(1,10)
             k=rd.randint(1,3)
-            p=rd.randint(1,10)
+            p=rd.randint(1,25)
             x=rd.randint(10**3,10**5)
             print(n,m,k,p,x,file=inputFile)
             for ni in range(n):
@@ -39,7 +39,7 @@ for i in range(testcase):
             n=rd.randint(10,100)
             m=rd.randint(10,100)
             k=rd.randint(10,44)
-            p=rd.randint(10,100)
+            p=rd.randint(10,500)
             x=rd.randint(10**4,10**5)
             print(n,m,k,p,x,file=inputFile)
             for ni in range(n):
@@ -53,10 +53,10 @@ for i in range(testcase):
 
                 print(file=inputFile)
         else:
-            n=rd.randint(100,1000)
-            m=rd.randint(100,1000)
-            k=rd.randint(10,100)
-            p=rd.randint(100,1000)
+            n=rd.randint(10**2,10**3)
+            m=rd.randint(10**2,10**3)
+            k=rd.randint(10,10**2)
+            p=rd.randint(5*10**2,10**4)
             x=rd.randint(10**5,10**6)
             print(n,m,k,p,x,file=inputFile)
             for ni in range(n):

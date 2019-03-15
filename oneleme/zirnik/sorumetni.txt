@@ -1,49 +1,45 @@
-Çağatay fakir bir bilgisayar mühendisi öğrencisidir.
-Çağatay yeni bir bilgisayar alacaktır.
+Çağatay ekonomik zorluklar çeken ve yeni bir bilgisayara ihtiyacı olan mazlum bir bilgisayar mühendisliği öğrencisidir.
 
-Çağatay istediği N tane bilgisayarın fiyatını ve M tane özelliğini kaydetmiştir.
+Çağatay, piyasa araştırması sırasında bulduğu N tane bilgisayarın fiyatını ve M tane özelliğini kaydetmiştir.
 
-Bazi bilgisayar darboğaz yapmaktadır.
-Bir bilgisayarın seçilen herhangi iki özelliğin arasındaki fark _K_'dan büyük
-olduğu durumlarda darboğaz olmaktadır ve büyük olan özellik
-küçük olanın _K_ fazlası olur.
+Bazı bilgisayarlar darboğaz yapmaktadır. Bir bilgisayarın seçilen herhangi iki özelliğin arasındaki fark K'dan büyük olduğu durumlarda darboğaz olmaktadır ve büyük olan özellik küçük olanın K fazlası olur.
 
-Çağatay işinde kullanacağı için bilgisayarın özellikleri toplamı
-belirli bir P güç değerinden büyük olmalıdır. Çağatay'ın babası oğluna
-zırnık koklatmıyor ve sadece kendi biriktirdiği X kadar parası vardır.
+Çağatay'ın ihtiyacını karşılayabilmesi için, bilgisayarın özellikleri toplamı belirli bir P güç değerinden büyük olmalıdır. Çağatay'ın babası oğluna zırnık koklatmamaktadır ve Çağatay'ın bütçesi, kendi biriktirdiği X birim paradan ibarettir.
 
-Çağatay'ın isteklerini karşılayan ve fiyat/performans oranı
-en düşük olan bilgisayarı bulunuz.
+Çağatay'ın isteklerini karşılayan ve fiyat/performans oranı en düşük olan bilgisayarı bulunuz.
+
+
 
 
 input Format:
-İlk satırda N bilgisayar sayısı, M özellik sayısı, K fark değeri, P güç ve X fiyatı veriliyor <br>
+İlk satırda N bilgisayar sayısı, M özellik sayısı, K fark değeri, P güç ve X sahip olduğu para miktarı veriliyor <br>
 Takip eden N satırda bilgisayar fiyatı ve M tane özelliği veriliyor.
 
 output format:
-Alacağı bilgisayarın sıralamadaki yeri.
+İlk satırdaki bilgisayarın indeksi 1 olacak şekilde alacağı bilgisayarın indeksini yazdırınız.<br>
+Aranan özelliklerde bir bilgisayar yok ise -1 yazdırın.
 
 Constrains
-1<=N<=10^3 <br>
-1<=M<=10^3 <br>
-1<=M_i<10^2 <br>
-1<=K<=10^2 <br>
-1<=P<=10^3 <br>
-1<=X<=10^6 <br>
+1 <= N <= 10^3 <br>
+1 <= M <= 10^3 <br>
+1 <= M_i <= 10^2 <br>
+1 <= K <= 10^2 <br>
+1 <= P <= 10^5 <br>
+1 <= X <= 10^6 <br>
 
 
 Sample Input1:
 3 3 3 26 3000
 2000 15 10 8
 4000 20 17 15
-3000 8 9 10
+3000 8 9 6
 
 
 Sample Output1:
 1
 
 Explanation1:
-Çağatay'ın parasının yettiği sadece 1. ve 3. bilgisayardır. <br>
+Çağatay'ın parasının yettiği sadece 1. ve 3. bilgisayarlardır. <br>
 1. bilgisayar için:<br>
 Darboğaz kontrolü için tüm ikililere bakılcaktır. Baştan başlarsak<br>
 1. ve 2. özellik(15,10) çiftine bakıldığında K değerimiz 3 olduğundan ilk özellik 12 olur.<br>
@@ -54,6 +50,6 @@ fiyat/performans=2000/29 <br>
 <br>
 3. bilgisayar için: <br>
 Darboğaz kontrolü için tüm ikililere bakıldığında herhangi bir darboğaz yaşanmamıştır.<br>
-Bilgisayarın performansı 27.<br>
-Bilgisayarın fiyat/performans değeri 3000/27<br><br>
-fiyat/performans değeri en düşük olanı alıcağımız için "1" bastıracağız ekrana.
+Bilgisayarın performansı 23.<br>
+İstenilen performanstan küçük performans değeri olduğu için bu bilgisayarda alınmaz.<br><br>
+Fiyat/performans değeri en düşük olanı alıcağımız için "1" bastıracağız ekrana.

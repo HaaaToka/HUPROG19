@@ -1,23 +1,24 @@
-ACM Hacettepe Gıybet uygulamasını geliştiren Okan ve Batu biraz eğlenmek için uygulamaya yeni bir şey eklerler.
+ACM Hacettepe Gıybet uygulamasını geliştiren Okan ve Batu biraz eğlenmek için uygulamaya yeni bir şey eklerler.<br>
 Gıybet uygulamasında en çok gıybet yapan N kişi seçilir ve bu gıybet yapanların birbirinden nefret etme seviyeleri Okan ve Batu'nun geliştirdiği
-bir formulle ölçülür. Bu formulu kullanırken kullanıcıların isim ve soyisimlerinden yararlanılır.
+bir formüllle ölçülür. Bu formülü kullanırken kullanıcıların isim ve soyisimlerinden yararlanılır.
 İsim ve soyisimdeki her harfin ascii tablosundaki değerleri toplanarak Si,Ss değerleri oluşur.
-|Si_1 - Si_2| + | Ss_1 - Ss_2 | formulünü kullanarak seçilen 2 kişinin birbirinden nefret etme seviyeleri belirlenir.
-Hergün nefret tablosuna bir kişi eklenir ve tablodaki kişiler arasından nefret formulu kullanılarak birbirinden en çok nefret eden 2 kişi belirlenir.
-Hergün yeni bir kişi eklendiğinde birbirinden en çok nefret eden 2 kişinin birbirlerine ne kadar nefret ettirdiğini yazdırınız.
+|Si_1 - Si_2| + | Ss_1 - Ss_2 | formülünü kullanarak seçilen 2 kişinin birbirinden nefret etme seviyeleri belirlenir.
+Her gün nefret tablosuna bir kişi eklenir ve tablodaki kişiler arasından nefret formülü kullanılarak birbirinden en çok nefret eden 2 kişi belirlenir.
+Her gün yeni bir kişi eklendiğinde birbirinden en çok nefret eden 2 kişinin birbirlerine ne kadar nefret ettirdiğini yazdırınız.
 
 Okan ve Batu, gıybet uygulamasında en ağır dedikoduları yapan "ata mert"i nefret tablosunda ilk sıraya yerleştirirler.
 
 input Formatı:
-İlk satırda en çok gıybet N kullanıcı sayısı veriliyor \n
-takip eden N satırda ise boşluk ile ayrılmış isim ve soyisimleri gelmekte(isim ve soyisimler ingiliz alfabesinden tamamı küçük harftir) \n
+İlk satırda en çok gıybet yapan N kullanıcı sayısı veriliyor \n
+Takip eden N satırda ise boşluk ile ayrılmış isim ve soyisimleri gelmekte(isim ve soyisimler ingiliz alfabesinden tamamı küçük harftir) \n
 
 output format:
 Her yeni gıybetçi eklendiğinde nefret tablosunda bulunan kişiler arasında birbirinden en çok nefret eden 2 kişinin neret seviyesi yazdırılır.
 
 Constrains
-1<=N<=500000
-1< isim ve soyisim uzunlukları < 200
+1 <= N <= 500000
+1 <= isim uzunluğu <= 200
+1 <= soyisim uzunluğu <= 200
 
 
 Sample Input1:
@@ -35,26 +36,27 @@ Sample Output1:
 
 Explanation1:
 
+ascii(a->97,z->122)<br>
 ata mert -> (310 440) baslangıç olarak nefret tablosuna "ata mert"i ekliyoruz
 
-1) o guz -> (111 342)
-Şuan sadece 2 kişi olduğundan birbirinden en çok nefret eden 2 kişi "o guz" ve "ata mert"tir.
-nefret seviyesi ->| 310-111 |+| 440-342 | = 199+98 = 297
+1) o guz -> (111 342)<br>
+Şuan sadece 2 kişi olduğundan birbirinden en çok nefret eden 2 kişi <br> "o guz" ve "ata mert"tir.
+Nefret seviyesi ->| 310-111 |+| 440-342 | = 199+98 = 297
 
-2)bar an -> (309 207)
-"bar an" ve "ata mert" için nefret seviyesi -> | 309-310 | + | 207-440 | = 1+133 = 134
-"bar an" ve "o guz" için nefret seviyesi -> | 309-111 | + | 207-342 | = 198+135 = 333
-"ata mert", "o guz", "bar an" arasından birbirinden en çok nefret eden ikili "bar an" ve "o guz".
+2)bar an -> (309 207)<br>
+"bar an" ve "ata mert" için nefret seviyesi -> | 309-310 | + | 207-440 | = 1+133 = 134<br>
+"bar an" ve "o guz" için nefret seviyesi -> | 309-111 | + | 207-342 | = 198+135 = 333<br>
+"ata mert", "o guz", "bar an" arasından birbirinden en çok nefret eden ikili "bar an" ve "o guz"<br>
 
-3) ay ca -> (218 196)
-"ay ca" ve "ata mert" için nefret seviyesi -> | 218-310 | + | 196-440 | = 92+244= 336
-"ay ca" ve "o guz" için nefret seviyesi -> | 218-111 | + | 196-342 | = 117+146 = 263
-"ay ca" ve "bar an" için nefret seviyesi -> | 218-309 | + | 196-207 | = 91+11 = 103
+3) ay ca -> (218 196)<br>
+"ay ca" ve "ata mert" için nefret seviyesi -> | 218-310 | + | 196-440 | = 92+244= 336<br>
+"ay ca" ve "o guz" için nefret seviyesi -> | 218-111 | + | 196-342 | = 117+146 = 263<br>
+"ay ca" ve "bar an" için nefret seviyesi -> | 218-309 | + | 196-207 | = 91+11 = 103<br>
 4 kişi arasında birbirinden en çok nefret eden 2 kişi "ay ca" ve "ata mert"
 
-4) bil ge -> (311 204)
-"bil ge" ve "ata mert" için nefret seviyesi -> | 311-310 | + | 204-440 | = 1+236= 237
-"bil ge" ve "o guz" için nefret seviyesi -> | 311-111 | + | 204-342 | = 200+138= 338
-"bil ge" ve "bar an" için nefret seviyesi -> | 311-309 | + | 204-207 | = 2+3= 5
-"bil ge" ve "ay ca" için nefret seviyesi -> | 311-218 | + | 204-196 | = 93+8= 101
+4) bil ge -> (311 204)<br>
+"bil ge" ve "ata mert" için nefret seviyesi -> | 311-310 | + | 204-440 | = 1+236= 237<br>
+"bil ge" ve "o guz" için nefret seviyesi -> | 311-111 | + | 204-342 | = 200+138= 338<br>
+"bil ge" ve "bar an" için nefret seviyesi -> | 311-309 | + | 204-207 | = 2+3= 5<br>
+"bil ge" ve "ay ca" için nefret seviyesi -> | 311-218 | + | 204-196 | = 93+8= 101<br>
 5 kişi arasında birbirinden en çok nefret eden 2 kişi "bil ge" ve "o guz"
