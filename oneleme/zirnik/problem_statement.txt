@@ -1,0 +1,54 @@
+Çağatay is a oppressed computer science student who wants to buy a computer and he is going through some financial issues.
+
+Çağatay has wrote down the M attributes of N computers during his market research.
+
+Some computers have performance bottlenecks. If the difference between any two attributes of a computer is more than K, the bigger attribute will be reduced to smaller attribute plus K.
+
+Total sum of attributes of a computer has to be bigger than certain power value which is denoted as P in order to meet his needs. Çağatay's father doesn't give even a smallest bit money to his son and now Çağatay is forced to use the moneys he saved up which denoted as X.
+
+Help Çağatay to find the computer that satisfies his needs and has the lowest price/performance ratio.
+
+
+
+Input Format:
+First line contains 5 space seperated integers: 
+Number of computers N, number of attributes M, difference value K, power value P and the total amount of money that Çağatay has X.
+Each following N lines contain M + 1 space seperated integers: Price of computer and M attributes.
+
+Output Format:
+Print a single integer which denotes the index of the computer that Çağatay will buy, print -1 if there is no computer that satisfies Çağatay's needs. Computers are 1-indexed, namely the very first computer in input corresponds to 1 and so forth.
+
+Constraints
+1 <= N <= 10^3 <br>
+1 <= M <= 10^3 <br>
+1 <= M_i <= 10^2 <br>
+1 <= K <= 10^2 <br>
+1 <= P <= 10^5 <br>
+1 <= X <= 10^6 <br>
+
+
+Sample Input1:
+3 3 3 26 3000
+2000 15 10 8
+4000 20 17 15
+3000 8 9 6
+
+
+Sample Output1:
+1
+
+Explanation1:
+Çağatay can only afford first and third computers. <br>
+For the first computer:<br>
+We will check every pair of attributes for bottleneck. When we start checking from the top:<br>
+For the 1. and 2. attributes (15, 10), 1. attribute will be reduced to 13 since K equals 3 and 10 + 3 = 13.<br>
+For the 1. and 3. attributes (13, 8), again 1. attribute will be reduced to 11 since 8 + 3 = 11.<br>
+For the 2. and 3. attributes (10, 8), there will be no changes since 8 + 3 >= 10.<br>
+Total performance of the computer is 11 + 10 + 8 = 29.<br>
+Price/Performance = 2000 / 29.<br>
+<br>
+For the third computer: <br>
+There will be no changes in attributes since the difference between any pair of attributes is not bigger than K.<br>
+Performance value of the computer is 23.<br>
+This comptuer can't be purchased since it doesn't meet the Çağatay's power value requirement.<br><br>
+Output comptuer index will be "1" which has the lowest price/performance value.

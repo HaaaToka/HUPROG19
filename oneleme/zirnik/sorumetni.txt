@@ -42,8 +42,8 @@ Explanation1:
 Çağatay'ın parasının yettiği sadece 1. ve 3. bilgisayarlardır. <br>
 1. bilgisayar için:<br>
 Darboğaz kontrolü için tüm ikililere bakılcaktır. Baştan başlarsak<br>
-1. ve 2. özellik(15,10) çiftine bakıldığında K değerimiz 3 olduğundan ilk özellik 12 olur.<br>
-1. ve 3. özellik(12,8) çiftine bakıldığında K değerimiz 3 olduğundan ilk değerimiz 11 olur.<br>
+1. ve 2. özellik(15,10) çiftine bakıldığında K değerimiz 3 olduğundan ilk özellik 13 olur.<br>
+1. ve 3. özellik(13,8) çiftine bakıldığında K değerimiz 3 olduğundan ilk değerimiz 11 olur.<br>
 2. ve 3. özellik(10,8) çiftine bakıldığında herhangi bir değişiklik olmaz.<br>
 Bilgisayarın performansı 29 (11+10+8) olur. <br>
 fiyat/performans=2000/29 <br>
