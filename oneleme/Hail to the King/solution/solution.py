@@ -1,71 +1,8 @@
-def countSort(arr):
-    maxi = max(arr, key = lambda x: x[0])[0]
-    mini = min(arr, key= lambda x:x[0])[0]
-    bt_range = maxi-mini+1
-    count = [0]*bt_range
-    output = [0]*len(arr)
+import sys
+FILEDIR = ""
+sys.stdin = open(FILENDIR)
 
-    for i in range(len(arr)):
-        count[arr[i][0] - mini] += 1
-
-    for i in range(1, len(count)):
-        count[i] += count[i - 1]
-
-    for i in range(len(arr)-1, -1, -1):
-        output[count[arr[i][0]-mini]-1] = arr[i]
-        count[arr[i][0] - mini] -= 1
-
-    for i in range(len(arr)):
-        arr[i] = output[i]
-
-    return arr
-
-def binary_search_upper(find, arr):
-    f = find
-    u = len(arr)-1
-    d = 0
-    while u >= d:
-        mid = d+(u-d)//2
-        if  arr[mid][0] > f:
-            u = mid-1
-        elif arr[mid][0] <= f:
-            d = mid +1
-        else:
-            break
-    return d+abs(u-d)//2
-
-def binary_search(find, arr):
-    f = find
-    u = len(arr)-1
-    d = 0
-    while u >= d:
-        mid = d+(u-d)//2
-        if  arr[mid][0] >= f:
-            u = mid-1
-        elif arr[mid][0] <f:
-            d = mid +1
-        else:
-            break
-    return d+abs(u-d)//2
-
-def binary_search_lower(find, arr):
-    f = find
-    u = len(arr)-1
-    d = 0
-    while u >= d:
-        mid = d+(u-d)//2
-        if  arr[mid][0] >= f:
-            u = mid-1
-        elif arr[mid][0] <f :
-            d = mid +1
-        else:
-            break
-    return d+abs(u-d)//2
-
-
-k = int(input())
-
-RANGE = 100
+*_,k = list(map(int, input().split()))
 
 frst = list(map(int, input().split()))
 frst_degree = list(map(int, input().split()))
@@ -83,7 +20,11 @@ for (n, d) in zip(scnd, scnd_degree):
 
 
 std = k
-total = countSort(total)
+
+
+start = time.time()
+total.sort(key=lambda x: x[0])
+
 
 if len(total) % 2 == 0:
     median = (total[len(total) // 2 - 1][0], total[(len(total) // 2)][0])
@@ -97,87 +38,70 @@ if type(median) != tuple:
     for i in answer:
         if i[1] == 0:
             count += 1
-    print(str(median) + "\n")
+    print(str(median))
     print(str(count))
 else:
-    print("Total:",total)
-    answer = total[binary_search_lower(median[0] - std, total):binary_search_upper(median[1] + std, total)]
-    print("Answer:", answer)
-    left_med = binary_search(median[0], answer)
-    right_med = binary_search(median[1], answer)
-    count = 0
-    start = left_med
-    min_med = -1
-    max_count = -1
-    si = 0
-    sj = left_med
-    sj_r = left_med + 1
-    eof = True
-    # print("K:", k)
-    for i in range(left_med + 1):
-        if answer[i][1] == 0:
-            count += 1
-    while answer[left_med][0] + k >= answer[sj_r][0]:
-        if answer[sj_r][1] == 0:
-            count += 1
-        sj_r += 1
-        if sj_r >= len(answer):
-            eof = False
-            break
-    max_count = count
-    min_med = answer[left_med][0]
+    # print(median)
+    left_boundary = median[0] - k
+    right_boundary = median[1] + k
+    l_idx = 0
+    r_idx = 0
+    flag = True
+    for i in range(len(total)):
+        if right_boundary >= total[i][0] >= left_boundary:
+            r_idx = i
+            if flag:
+                l_idx = i
+                flag = False
+            if median[0] + k >= total[i][0] >= left_boundary:
+                ref_r = i+1
 
-    for i in range(left_med, right_med + 1):
-        # print("Now:",i, si, sj, sj_r)
-        while abs(answer[si][0] - answer[sj][0]) > k:
-            if answer[si][1] == 0:
-                count -= 1
-            si += 1
-            if si > len(answer):
-                break
-            # print("Second Now:", i, si, sj, sj_r)
-        if eof:
-            while abs(answer[sj][0] - answer[sj_r][0]) <= k:
-                if answer[sj_r][1] == 0:
-                    count += 1
-                sj_r += 1
-                # print("Third Now:", i, si, sj, sj_r)
-                if sj_r >= len(answer):
-                    eof = False
+    ref_l = l_idx
+    ref_c = 0
+    ref_med = median[0]
+    for i in range(ref_l, ref_r + 1):
+        if ref_med + k >= total[i][0] >= ref_med - k:
+            if total[i][1] == 0:
+                ref_c += 1
+        else:
+            break
+    max_c = ref_c
+    right_flag = False
+    left_flag = False
+    if median[0] != median[1]:
+        for num in range(median[0], median[1] + 1):
+
+            cur_r = num + k
+            cur_l = num - k
+            while not (cur_r >= total[ref_l][0] >= cur_l):
+                if total[ref_l][1] == 0:
+                    ref_c -= 1
+                ref_l += 1
+                if ref_l > r_idx:
+                    left_flag = True
+                    break
+            while (cur_r >= total[ref_r][0] >= cur_l):
+                if total[ref_r][1] == 0:
+                    ref_c += 1
+                ref_r += 1
+                if ref_r > r_idx:
+                    right_flag = True
                     break
 
-        if count > max_count:
-            max_count = count
-            min_med = answer[sj][0]
-        sj += 1
-    print(str(min_med)+"\n")
-    print(str(max_count))
+            if ref_c > max_c:
+                max_c = ref_c
+                ref_med = num
+            if right_flag:
+                break
+            if left_flag:
+                break
+
+    print(ref_med)
+    print(max_c)
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#10.400695562362671
