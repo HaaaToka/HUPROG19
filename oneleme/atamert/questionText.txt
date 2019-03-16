@@ -1,0 +1,67 @@
+
+Okan and Batu are developer of ACM Hacettepe Gıybet app. They want to add new feature for have fun.
+In the Gıybet app, they chose N as the gossiper. The level of hatred of these gossipers is measured by Okan and Batu's formula.
+The names and surnames of the users are used when using this formula.
+The values ​​in the ascii table of each letter in the first and last name are collected and Si, Ss values ​​are formed.
+Using the formula |Si_1 - Si_2| + | Ss_1 - Ss_2 |, the hating levels of the two chosen persons are determined.
+Every day a person is added to the hate table. Using the formula of hate among the people in the table 2 people who hate the most are determined.
+Whenever a new person is added each day, print out the level of hatred of two people who are hating the most.
+
+Okan and Batu place "ata mert" in the first place in the hate table, which makes the most severe rumors in the Gıybet app.
+
+
+
+input Formatı:
+Number of N gossipers in the first line
+In the following line N, the names and surnames separated by spaces (names and surnames are all lowercase letters in the English alphabet)
+
+
+output format:
+When each new gossiper is added, print out the level of hatred of two people who are hating the most.
+
+
+Constrains
+1 <= N <= 500000
+1 <= isim uzunluğu <= 200
+1 <= soyisim uzunluğu <= 200
+
+
+Sample Input1:
+4
+o guz
+bar an
+ay ca
+bil ge
+
+Sample Output1:
+297
+333
+336
+338
+
+Explanation1:
+
+ascii(a->97,z->122)
+ata mert -> ( 97+116+97  109+101+114+116 )=(310 440) Firstly, we add "ata mert" to the hate table.
+
+1) o guz -> (111 342)
+Since there are only two people now, two people who two hating the most each other are "o guz" and "ata mert".
+The hatred level ->| 310-111 |+| 440-342 | = 199+98 = 297
+
+2)bar an -> (309 207)
+The level of hatred for "bar an" and "ata mert" -> | 309-310 | + | 207-440 | = 1+133 = 134
+The level of hatred for "bar an" and "o guz" -> | 309-111 | + | 207-342 | = 198+135 = 333
+Inside of "ata mert", "o guz", "bar an" who two hating the most each other are "bar an" and "o guz".
+
+3) ay ca -> (218 196)
+The level of hatred for "ay ca" and "ata mert" -> | 218-310 | + | 196-440 | = 92+244= 336
+The level of hatred for "ay ca" and "o guz" -> | 218-111 | + | 196-342 | = 117+146 = 263
+The level of hatred for "ay ca" and "bar an" -> | 218-309 | + | 196-207 | = 91+11 = 103
+Inside of 4 people who two hating the most each other are "ay ca" and "ata mert".
+
+4) bil ge -> (311 204)
+The level of hatred for "bil ge" and "ata mert" -> | 311-310 | + | 204-440 | = 1+236= 237
+The level of hatred for "bil ge" and "o guz"-> | 311-111 | + | 204-342 | = 200+138= 338
+The level of hatred for "bil ge" and "bar an" -> | 311-309 | + | 204-207 | = 2+3= 5
+The level of hatred for "bil ge" and "ay ca" -> | 311-218 | + | 204-196 | = 93+8= 101
+Inside of 5 people who two hating the most each other are "bil ge" and "o guz".

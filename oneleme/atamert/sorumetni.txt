@@ -9,7 +9,7 @@ Her gün yeni bir kişi eklendiğinde birbirinden en çok nefret eden 2 kişinin
 Okan ve Batu, gıybet uygulamasında en ağır dedikoduları yapan "ata mert"i nefret tablosunda ilk sıraya yerleştirirler.
 
 input Formatı:
-İlk satırda en çok gıybet yapan N kullanıcı sayısı veriliyor \n
+İlk satırda en çok gıybet yapan N kullanıcı sayısı veriliyor <br>
 Takip eden N satırda ise boşluk ile ayrılmış isim ve soyisimleri gelmekte(isim ve soyisimler ingiliz alfabesinden tamamı küçük harftir) \n
 
 output format:
@@ -37,7 +37,7 @@ Sample Output1:
 Explanation1:
 
 ascii(a->97,z->122)<br>
-ata mert -> (310 440) baslangıç olarak nefret tablosuna "ata mert"i ekliyoruz
+ata mert -> ( 97+116+97  109+101+114+116 )=(310 440) baslangıç olarak nefret tablosuna "ata mert"i ekliyoruz
 
 1) o guz -> (111 342)<br>
 Şuan sadece 2 kişi olduğundan birbirinden en çok nefret eden 2 kişi <br> "o guz" ve "ata mert"tir.

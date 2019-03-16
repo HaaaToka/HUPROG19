@@ -6,6 +6,8 @@ Aralarında N tane oyun oynamaktadırlar. Her oyun B bölümden oluşmakta. Oyun
 input Format:
 İlk satırda N oyun sayısı. <br>
 Takip eden N satırda bölüm sayısı B, maksimum oynanabilecek bölüm sayısı M ve oyuna kimin başlayacağı K ya da A.
+
+
 output format:
 Ekmeğe gidecek kardeşin ismi ve kaybeden kardeşin kazandığı oyun sayısı. Ekmeğe tek bir kardeş gider. Asya ya da Kayra.
 
