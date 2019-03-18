@@ -16,5 +16,10 @@ First line;
 Next n line;
 	n piece of "x"(block) or "."(empty).
 
+Constraints:
+0 < n <= 250
+0 <= m <= 150
+0 <= ri, ci, rf, cf < n
+
 Output Format:
 Minimum step count. If bomberman can't get to the exit "Impossible".
