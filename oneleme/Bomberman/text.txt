@@ -13,6 +13,11 @@ rf,cf-çıkış koordinatları
 Sonraki n satır:
 n tane "x" tahta blok veya "."
 
+Constraints:
+0 < n <= 250
+0 <= m <= 150
+0 <= ri, ci, rf, cf < n
+
 Output Format:
 Atılabilecek minimum adım sayısı. Çıkılamıyorsa "Impossible".
 
