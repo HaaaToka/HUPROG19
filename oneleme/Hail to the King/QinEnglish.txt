@@ -32,20 +32,11 @@ Second array level of how much each Eminem fan likes Eminem.
 
 Constraints:
 
-0 < N <= 10**6
-0 < M <= 10**6
-1 <= K <= 10**6
+0 < N <= 2*(10^6)
+0 < M <= 2*(10^6)
+1 <= K <= 5*(10^6)
 0 <= liking level <= 10**6
 
 Output Format:
 Print position of Okan on the scale to first line.
 Print number of Okan's Led Zeppelin fan friends.
-
-
-
-
-
-
-
-
-
