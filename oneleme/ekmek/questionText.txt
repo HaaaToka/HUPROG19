@@ -12,14 +12,14 @@ The name of the sibling who went to the bread and the number of games lost by th
 
 
 Constrains
-1 <= N,B <= 10^9
+1 <= N,B <= 10^6
 1 <= M <= B
 
 
 Sample Input1:
-2 \n
-3 2 K \n
-5 1 A \n
+2
+3 2 K 
+5 1 A 
 
 Sample Output1:
 Asya 0
