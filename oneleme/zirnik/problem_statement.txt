@@ -4,16 +4,16 @@
 
 Some computers have performance bottlenecks. If the difference between any two attributes of a computer is more than K, the bigger attribute will be reduced to smaller attribute plus K.
 
-Total sum of attributes of a computer has to be bigger than certain power value which is denoted as P in order to meet his needs. Çağatay's father doesn't give even a smallest bit money to his son and now Çağatay is forced to use the moneys he saved up which denoted as X.
+Total sum of attributes of a computer has to be bigger than certain power value which denoted as P in order to meet his needs. Çağatay's father doesn't give even a smallest bit money to his son and now Çağatay is forced to use the moneys he saved up which denoted as X.
 
 Help Çağatay to find the computer that satisfies his needs and has the lowest price/performance ratio.
 
 
 
 Input Format:
-First line contains 5 space seperated integers: 
+First line contains 5 space seperated integers:
 Number of computers N, number of attributes M, difference value K, power value P and the total amount of money that Çağatay has X.
-Each following N lines contain M + 1 space seperated integers: Price of computer and M attributes.
+Each following N lines contain M + 1 space seperated integers: Price of the computer and M attributes.
 
 Output Format:
 Print a single integer which denotes the index of the computer that Çağatay will buy, print -1 if there is no computer that satisfies Çağatay's needs. Computers are 1-indexed, namely the very first computer in input corresponds to 1 and so forth.
@@ -51,4 +51,4 @@ For the third computer: <br>
 There will be no changes in attributes since the difference between any pair of attributes is not bigger than K.<br>
 Performance value of the computer is 23.<br>
 This comptuer can't be purchased since it doesn't meet the Çağatay's power value requirement.<br><br>
-Output comptuer index will be "1" which has the lowest price/performance value.
+Output computer's index will be "1" which has the lowest price/performance value.

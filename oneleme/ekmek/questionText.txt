@@ -1,14 +1,21 @@
-Kayra and Asya are siblings. Before breakfast, their mother realized there is no bread at home in the one morning. She wanted Asya and Kayra go to the market to buy bread. The siblings are determined by playing their own game to decide who is going to buy bread.
-They play N games between them. Each game consists of B parts. The game is played in sequence and is from section 1 up to the N. section. Each player has the right to play the maximum M episode during his / her own. A person will lose who played B. episode. A person will go to buy bread who won the last game. Let's find who would go to the bread.
-The two siblings play the game optimally and pass each section they play.
+Kayra and Asya are siblings. Before breakfast, their mother realized there is no bread at the home.
+She wanted Asya and Kayra to go to the market and buy bread.
+The siblings are determined by playing their own game to decide who is going to buy bread.
 
-input Format:
-Number of N games in the first row.
-In the next N line, the number of episodes is B, the maximum number of episodes that can play M,  and who will start the game K or A.
+They play N games between them. The game is played in turns. Each game consists of B chapters.
+Each player is allowed to pass maximum M chapters during his / her own turn.
+A player will lose if he/she plays the last chapter. Loser of the games will go to buy bread.
+Let's find who would go to the market.
+
+The two siblings play the game optimally.
+
+Input Format:
+Number of games N at the first row.
+Next N line, the number of chapters B, the maximum number of chapters that can be passed M and the player who will start the game K(Kayra) or A(Asya).
 
 
 output format:
-The name of the sibling who went to the bread and the number of games lost by the lost brother. A sibling goes to the bread. Asya or Kayra.
+The name of the sibling who is going to the market and the number of games which won by the loser. The sibling goes to the market, Asya or Kayra.
 
 
 Constrains
@@ -18,21 +25,21 @@ Constrains
 
 Sample Input1:
 2
-3 2 K 
-5 1 A 
+3 2 K
+5 1 A
 
 Sample Output1:
 Asya 0
 
 Explanation1:
 1.Game
-Episodes -> 1 2 3
+Chapters -> 1 2 3
 Who played->K K A
 Asya lost the first game
 
 2.Game
-Episodes -> 1 2 3 4 5
+Chapters -> 1 2 3 4 5
 Who played->A K A K A
 Asya lost the second game
 
-Asya:0 Kayra:2. Asya went to buy bread.
+Asya:0 Kayra:2. Asya went to market to buy bread.

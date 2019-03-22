@@ -5,7 +5,7 @@ Their formula makes use of names and surnames of the users.
 The sums of names and surnames are calculated by using the corresponding values of letters in ASCII table which denoted as Si, Ss respectively.
 The hatred level of any two person is determined by using the formula |Si_1 - Si_2| + | Ss_1 - Ss_2 |.
 A person is added to hatred table every day and two person who hate each other the most is selected by using the formula.
-Print out the level of hatred of the people who are hating each other the most whenever a new person is added to table for each day.
+Print out the level of hatred of the people who are hating each other the most whenever a new person is added to the table for each day.
 
 Okan and Batu place "ata mert" in the first place in the hatred table who makes the most severe rumors in the Gıybet app.
 
@@ -22,8 +22,8 @@ Print out the hatred level of the gossipers who hate each other the most for eac
 
 Constrains
 1 <= N <= 500000
-1 <= isim uzunluğu <= 200
-1 <= soyisim uzunluğu <= 200
+1 <= length of name <= 200
+1 <= length of surname <= 200
 
 
 Sample Input1:

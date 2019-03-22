@@ -2,13 +2,15 @@
 
 Çağatay, piyasa araştırması sırasında bulduğu N tane bilgisayarın fiyatını ve M tane özelliğini kaydetmiştir.
 
-Bazı bilgisayarlar darboğaz yapmaktadır. Bir bilgisayarın seçilen herhangi iki özelliğin arasındaki fark K'dan büyük olduğu durumlarda darboğaz olmaktadır ve büyük olan özellik küçük olanın K fazlası olur.
+Bazı bilgisayarlar darboğaz yapmaktadır.
+Bir bilgisayarın seçilen herhangi iki özelliğin arasındaki fark K'dan büyük
+olduğu durumlarda darboğaz olmaktadır ve büyük olan özellik küçük olanın K fazlası olur.
 
-Çağatay'ın ihtiyacını karşılayabilmesi için, bilgisayarın özellikleri toplamı belirli bir P güç değerinden büyük olmalıdır. Çağatay'ın babası oğluna zırnık koklatmamaktadır ve Çağatay'ın bütçesi, kendi biriktirdiği X birim paradan ibarettir.
+Çağatay'ın ihtiyacını karşılayabilmesi için, bilgisayarın özellikleri toplamı
+belirli bir P güç değerinden büyük olmalıdır. Çağatay'ın babası oğluna zırnık
+koklatmamaktadır ve Çağatay'ın bütçesi, kendi biriktirdiği X birim paradan ibarettir.
 
 Çağatay'ın isteklerini karşılayan ve fiyat/performans oranı en düşük olan bilgisayarı bulunuz.
-
-
 
 
 input Format:

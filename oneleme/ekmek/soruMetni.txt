@@ -1,11 +1,20 @@
-﻿Kayra ve Asya iki kardeştir. Bir sabah kahvaltı yapıcakları sırada anneleri evde ekmek olmadığını fark ediyor. Kayra ve Asya'ya biriniz ekmeğe gitsin diyor. Kardeşler ekmek almaya kimin gideceğine karar vermek için kendi geliştirdikleri oyunu oynayarak belirliyorlar.<br>
-Aralarında N tane oyun oynamaktadırlar. Her oyun B bölümden oluşmakta. Oyun sırayla oynanmaktadır ve 1. bölümden başlayıp N. bölüme kadardır. Her oyuncu kendi sırasında maksimum M bölüm oynama hakkına sahiptir. B'ninci bölümü oynayan oyunu kaybetmektedir. En az oyunu kazanan ekmeğe gider. Kimin ekmeğe gideceğini bulalım.<br>
-İki kardeş de oyunu optimal oynamaktadır ve oynadıkları her bölümü geçmektedirler.
+﻿Kayra ve Asya iki kardeştir.
+Bir sabah kahvaltı yapıcakları sırada anneleri evde ekmek olmadığını fark ediyor.
+Kayra ve Asya'ya biriniz ekmeğe gitsin diyor. Kardeşler ekmek almaya kimin gideceğine
+karar vermek için kendi geliştirdikleri oyunu oynuyorlar.<br>
+
+Aralarında N tane oyun oynamaktadırlar. Her oyun B bölümden oluşmakta.
+Oyun sırayla oynanmaktadır ve 1. bölümden başlayıp B. bölüme kadardır.
+Her oyuncu kendi sırasında maksimum M bölüm geçme hakkına sahiptir.
+B. bölümü oynayan oyunu kaybetmektedir. En az oyunu kazanan ekmeğe gider.
+Kimin ekmeğe gideceğini bulalım.<br>
+
+İki kardeş de oyunu optimal oynamaktadır.
 
 
 input Format:
 İlk satırda N oyun sayısı. <br>
-Takip eden N satırda bölüm sayısı B, maksimum oynanabilecek bölüm sayısı M ve oyuna kimin başlayacağı K ya da A.
+Takip eden N satırda; bölüm sayısı B, maksimum geçilebilecek bölüm sayısı M ve oyuna kimin başlayacağı K(Kayra) ya da A(Asya).
 
 
 output format:

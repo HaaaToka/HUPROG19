@@ -10,22 +10,22 @@ To determine how much each participant likes metal the formula below will be use
 Level of Metal = Led Zeppelin liking level * 7 + Eminem liking level * 3
 
 
-Okan wants his position  on the scale to be so that sum of distances from Okan to every other participant
+Okan wants his position  on the scale to be such that sum of distances from Okan to every other participant
 should be minimum.(Positive value of difference between the positions of two participants on the scale defined as distance.)
 
 Okan needs some friends.Hence he want to be friends with participants whose position is at most K unit far from Okan's position on the scale.
-Find out how many of Okan's friends are Led Zeppelin fan.If there are more than one position so that sum of distances minimum Okan wants his position on the scale to be so that number of Okan's Led Zeppelin fan friends maximized.
-If there are more than one position sum of distances minimum and number of Okan's Led Zeppelin fan friends maximized then he wants his position on the scale to be minimum number possible. 
+Find out how many of Okan's friends are Led Zeppelin fan.If there are more than one position such that sum of distances minimum Okan wants his position on the scale to be such that number of Okan's Led Zeppelin fan friends maximized.
+If there are more than one position sum of distances minimum and number of Okan's Led Zeppelin fan friends maximized then he wants his position on the scale to be minimum number possible.
 
 
 
 
 Input Format:
 First line N, M, K three integers, number of Led Zeppelin fans, number of Eminem fans, and K distance respectively.
-Following 2 line:
+Following 2 lines:
 First array level of how much each Led Zeppelin fan likes Led Zeppelin.
 Second array level of how much each Led Zeppelin fan likes Eminem.
-Next 2 line:
+Next 2 lines:
 First array level of how much each Eminem fan likes Led Zeppelin.
 Second array level of how much each Eminem fan likes Eminem.
 

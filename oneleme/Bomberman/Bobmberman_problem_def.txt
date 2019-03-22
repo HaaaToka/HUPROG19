@@ -1,7 +1,7 @@
 Bomberman wants to get home as fast as possible after finishing his shift
-in game saloon. There is a exit door in the level he is in but there are
-boxes in his way. Bomberman has limited bomb and wants to get exit door
-with m bomb or less. Help him find minimum step to going exit door by using
+in the game saloon. There is an exit door in the level he is in but there are
+some boxes in his way. Bomberman has limited bombs and wants to get to the exit door
+with m bombs or less. Help him to find the exit door with minimum number of steps by using
 at most m bombs.
 
 Explosion effect of bombs are 1 cell up, down, left and right.
@@ -14,7 +14,7 @@ First line;
 	ri,ci- initial coordinates,
 	rf,cf- exit coordinates.
 Next n line;
-	n piece of "x"(block) or "."(empty).
+	n piece of "x"(boxes) or "."(empty).
 
 Constraints:
 0 < n <= 250
@@ -22,4 +22,4 @@ Constraints:
 0 <= ri, ci, rf, cf < n
 
 Output Format:
-Minimum step count. If bomberman can't get to the exit "Impossible".
+Print the minimum number of steps, print "Impossible" if Bomberman can't get to the exit.
