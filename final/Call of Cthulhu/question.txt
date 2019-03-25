@@ -1,37 +1,49 @@
-Dexter aynı anda birden fazla iş yapmayı çok sevdigi için kardeşiyle konuştuğu sırada kardeşinin söyledigi kelimeyi sayılara çevirmektedir.<br>
-Bu işlemi şu şekilde yapar.<br>
-Kelimedeki her farklı *L* alt kelimeye iki değer atar.<br>
-L alt kelimeninin ilk değeri A, ana kelimede tekrar ettiği her kısımdaki orta değerlerin toplamıdır.<br>
-Orta değerler l,r (l 1'den başlayarak, r >= l) alt kelimesi için l+floor((r-l)/2).<br>
-L alt kelimesinin ikinci değeri B, ana kelimede tekrar etme sayısıdır.<br><br>
+Dexter aynÄ± anda birden fazla iÅŸ yapmayÄ± Ã§ok sevdigi iÃ§in kardeÅŸiyle konuÅŸtuÄŸu sÄ±rada kardeÅŸinin sÃ¶yledigi kelimeyi sayÄ±lara Ã§evirmektedir.<br>
+Bu iÅŸlemi ÅŸu ÅŸekilde yapar.<br>
+Kelimedeki her farklÄ± *L* alt kelimeye iki deÄŸer atar.<br>
+L alt kelimeninin ilk deÄŸeri A, ana kelimede tekrar ettiÄŸi her kÄ±sÄ±mdaki orta deÄŸerlerin toplamÄ±dÄ±r.<br>
+Orta deÄŸerler her alt kelime iÃ§in  ÅŸu ÅŸekilde hesaplanÄ±r.
 
-Dexter alt kelimelerin B değerini yazdırmak istemektedir.Bunun için 2 kural vardır.<br>
-İlk kural i0,i1,...in-1 için her B değerinin A değeri kendinden öncekinin A değerinden büyük olmak zorundadır.<br>
-İkinci kural arda arda gelen aynı B değerleri tek B değerine düşürebilir.<br><br>
 
-Dexter'a bu özellikleri taşıyan en küçük sıkıştırılmış sayıya yazdırmasına yardımcı olun.
+![image](https://s3.amazonaws.com/hr-assets/0/1552317607-95ed1bea8e-_.png)<br>
+L alt kelimesinin ikinci deÄŸeri B, ana kelimede tekrar etme sayÄ±sÄ±dÄ±r.<br><br>
+
+Dexter alt kelimelerin B deÄŸerini yazdÄ±rmak istemektedir.Bunun iÃ§in 2 kural vardÄ±r.<br>
+Ä°lk kural her farklÄ± alt kelimenin B deÄŸeri Ã¶yle yazÄ±lmalÄ±dÄ±r ki o kelimenin A deÄŸeri kendinden Ã¶nceki alt kelimenin A deÄŸerinden bÃ¼yÃ¼k olmalÄ±dÄ±r.<br>
+Ä°kinci kural arda arda gelen aynÄ± B deÄŸerleri tek B deÄŸerine dÃ¼ÅŸÃ¼rebilir.<br><br>
+
+Dexter'a bu Ã¶zellikleri taÅŸÄ±yan en kÃ¼Ã§Ã¼k sÄ±kÄ±ÅŸtÄ±rÄ±lmÄ±ÅŸ sayÄ±ya yazdÄ±rmasÄ±na yardÄ±mcÄ± olun.
+
 
 Input format:
-İlk satır için bir adet doğal sayı n
+Ä°lk satÄ±r iÃ§in bir adet doÄŸal sayÄ± n kelimenin boyudur.<br>
+Ä°kinci satÄ±r kelime'dir.
+
+Output Format:
+En kÃ¼Ã§Ã¼k sÄ±kÄ±ÅŸtÄ±rÄ±lmÄ±ÅŸ sayÄ± dizisini yazdÄ±rÄ±n.
+
+Constraints:
 0 <= n <= 400
 
 
-Örnek:
+
+
+ï¿½rnek:
 
 input:
 3
-aba
+cdc
 
 output:
 21
 
 
 Exp:
-Alt kelime: a Orta değerlerinin toplamı: 2 (Orta değerler:[(0,0), (2,2)]) Tekrar sayısı: 2
-Alt kelime: ba, Orta değerlerinin toplamı: 2 (Orta değerler:[(1,2)]), Tekrar sayısı: 1
-Alt kelime: ab, Orta değerlerinin toplamı: 1 (Orta değerler:[(0,1)]), Tekrar sayısı: 1
-Alt kelime: aba, Orta değerlerinin toplamı: 1 (Orta değerler:[(0,2)]), Tekrar sayısı: 1
-Alt kelime: b, Orta değerlerinin toplamı: 1 (Orta değerler:[(1,1))]), Tekrar sayısı: 1
+Alt kelime: c Orta deÄŸerlerinin toplamÄ± ( A deÄŸeri ): 2 (Orta deÄŸerler:[(0,0), (2,2)]) Tekrar sayÄ±sÄ± ( B deÄŸeri ): 2<br>
+Alt kelime: dc, Orta deÄŸerlerinin toplamÄ±( A deÄŸeri ): 2 (Orta deÄŸerler:[(1,2)]), Tekrar sayÄ±sÄ± ( B deÄŸeri ): 1<br>
+Alt kelime: cd, Orta deÄŸerlerinin toplamÄ± ( A deÄŸeri ): 1 (Orta deÄŸerler:[(0,1)]), Tekrar sayÄ±sÄ± ( B deÄŸeri ): 1<br>
+Alt kelime: cdc, Orta deÄŸerlerinin toplamÄ± ( A deÄŸeri ): 1 (Orta deÄŸerler:[(0,2)]), Tekrar sayÄ±sÄ± ( B deÄŸeri ): 1<br>
+Alt kelime: d, Orta deÄŸerlerinin toplamÄ± ( A deÄŸeri ): 1 (Orta deÄŸerler:[(1,1))]), Tekrar sayÄ±sÄ± ( B deÄŸeri ): 1<br><br>
 
-Sıkıştırılmış işleminden önce  önce: 21111
-Sıkıştırılmış isleminden sonra 21
+SÄ±kÄ±ÅŸtÄ±rÄ±lmÄ±ÅŸ iÅŸleminden Ã¶nce  Ã¶nce: 21111<br>
+SÄ±kÄ±ÅŸtÄ±rÄ±lmÄ±ÅŸ isleminden sonra 21<br>
