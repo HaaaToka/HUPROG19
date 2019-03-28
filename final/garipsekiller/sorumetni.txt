@@ -1,5 +1,5 @@
-nxm'lik karelere ayrılmış tahtanız var.
-Her kare "*","+" veya "." sembollerinden birini bulunduruyor.
+﻿$n \times m$'lik karelere ayrılmış tahtanız var.
+Her kare $"*","+"$ veya $"."$ sembollerinden birini bulunduruyor.
 
 Trimino, 2 karesi merkez kareyle kenar paylaşan 3 kareden oluşan şekle verilen addır.
 Tromino 2 farklı şekle sahiptir. Merkez kareyle kenar paylaşan karelerin ortak
@@ -8,19 +8,25 @@ bir köşesi var ise L şeklinde yok ise I şeklindedir.
 <Sekiller>
 
 Tahtaya birbiriyle çakışmayan triminolar çizebilirsiniz.
-I şeklindeki triminoların merkez karesinde "+" bulunmak zorundayken
-L şeklindeki triminoların merkez karesinde "*" ya da "+" bulunabilir.
-Merkez olmayan bütün kareler "." bulundurmak zorundadır.
+I şeklindeki triminoların merkez karesinde $"+"$ bulunmak zorundayken
+L şeklindeki triminoların merkez karesinde $"*"$ ya da $"+"$ bulunabilir.
+Merkez olmayan bütün kareler $"."$ bulundurmak zorundadır.
 
 Tahtaya maksimum sayıda çakışmayan poliminolar çiziniz.
 
 
+
 Input Format:
-Ilk satırda boşlukla ayrılmış n ve m tam sayıları:
-Takip eden n satırda m uzunluğunda "*","+" veya "." dan oluşan tahta durumu verilir.
+Ilk satırda boşlukla ayrılmış $n$ ve $m$ tam sayıları:
+Takip eden n satırda m uzunluğunda $"*","+"$ veya $"."$ dan oluşan tahta durumu verilir.
+
+
+Constrains:
+$2<=n,m<=100$
+
 
 Output Format:
-Çizdiğiniz triminoları gösteren her biri m uzunluğunda n satırdan oluşan tahta
+Çizdiğiniz triminoları gösteren her biri $m$ uzunluğunda $n$ satırdan oluşan tahta
 durumunu bastırın.
 Eğer bir kare bir triminoya ait ise ingiliz alfabesine ait herhangi bir küçük harf bastırın.
 Eğer o kare bir triminoya ait değilse o karede bulunan karakteri bastırın.
@@ -29,6 +35,8 @@ Başka bir triminoya ait kare ile kenar paylaşan trimino, kenar paylaştığı
 triminodan farklı harf içermelidir.
 
 Birden fazla cevap olduğu durumda herhangi birini bastırınız.
+
+
 
 
 Sample Input1:
