@@ -27,14 +27,11 @@ Constraints:
 
 
 
-
-�rnek:
-
-input:
+Sample input:
 3
 cdc
 
-output:
+Sample output:
 21
 
 
