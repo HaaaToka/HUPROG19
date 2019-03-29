@@ -1,0 +1,26 @@
+Fuşya fareleri kovalamayı çok sevmektedir ve birgün farelerin üstünde gezindiği bir ağaç görür. Fuşya'nın bu ağaçta bulunabileceği noktalar $1$'den $N$ 'e kadar sırasıyla numaralandırılıyor. Fuşya bu fareleri avlamak istiyor ve ağaca tırmanıyor.<br>
+
+Fuşya ilk olarak $y$ noktasındadır ve kilosu $k$ ye eşittir. Ağaçta $S$ adet fare bulunmaktadır. Fuşya sırasıyla fareleri fark ediyor. Fark ettiği $S_i$'ninci fare $a$ noktası ile $b$ noktası arasında gidip gelmektedir ve kilosu $f$ ye eşittir. Fuşya sırasıyla her fark ettiği fareyi avlayabilir ya da yerinde durabilir. (o fareyi bir daha asla avlayamaz).<br>
+Fuşya $S_i$'ninci sırada fark ettiği fareyi yakalaması için Fuşya'nın kilosu $k$, farenin kilosu $f$'den yüksek olmalıdır.<br>
+Fuşya bir fareyi yakalaması için gideceği öyle bir $h$ noktası seçmelidir ki farenin gidip geldiği $a$ ve $b$ arasındaki yol Fuşya'nın o anki bulunduğu nokta ile $h$ arasındaki noktanın arasındaki yolun tamamen içinde kalmalıdır. Eğer Fuşya fareyi yakalarsa yeni bulunduğu konum $h$ noktası olur ve kilosu $d$ kadar artar. Eğer bu fareyi yakalaması imkansızsa yerinden kıpırdamaz ve o sırada tüylerini düzeltir.<br><br>
+Fuşya bütün fareleri fark ettikten sonra Fuşya'nın en tombiş (en ağır) haline ulaşmasına yardım edin.
+
+Input Format
+
+İlk satır boşluklar ile ayrılmış 3 adet tam sayı bulunduruyor: Ağaçtaki nokta sayısı $N$, Fuşya'nın ağaçtaki ilk konumu $y$ ve ilk kilosu $k$.<br>
+Takip eden $N - 1$ satır ise boşluklar ile ayrılmış 2 tam sayı bulunduruyor: $u$ ve $v$, ağaçtaki bu iki nokta arasında bir yol olduğunu ifade ediyor.<br>
+Sonraki satır saniyeyi belirten $S$ tam sayısını bulunduruyor.<br>
+Takip eden $S$ satır boşluklar ile ayrılmış 4 tam sayı bulunduruyor : $S_i$'ninci saniyedeki farenin gidip geldiği noktalar $a$ ve $b$, farenin kilosu $f$, fare Fuşya tarafından avlanırsa Fuşya'nın kilosundaki artış miktari $d$.
+
+Output Format
+
+Fuşya'nın $S$ saniye sonra ulaşabileceği en yüksek kiloyu belirten tek bir tam sayı bastırın.
+
+Constraints
+
+$1 \leq N,S \leq 10^5$ <br>
+$1 \leq h, a, b, u, v, y \leq N$ <br>
+$a \neq b$ <br>
+$1 \leq k, d, f \leq 10^9$ <br>
+
+Verilen çizge bağlı ve asikliktir.

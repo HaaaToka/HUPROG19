@@ -1,5 +1,3 @@
-
-
 n, m, k, p, x = map(int, input().split())
 pcs = []
 for _ in range(n):
