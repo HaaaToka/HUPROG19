@@ -2,35 +2,30 @@ Daenerys Targeryan 2 büyük ordusu Dothraki'ler ve Lekesizler ile
 King's Landing'i kuşatmaya gidiyor. Bu orduları farklı yollardan
 göndermek isteyen Daenerys, Tyrion'dan kuşatma için orduların 
 izleyebileceği yolları bulmasını istiyor. N satır ve M
-sütundan oluşan haritada bazı noktalarda toplam C tane şehir var 
+sütundan oluşan haritada bazı noktalarda toplam S tane şehir var 
 ve şehirler fethedilmeden geçilemiyor. Daenerys'in Tyrion'a verdiği
 üç kural var:
-
 I- Orduların şuan bulunduğu nokta (1,1) ve gidilmesi gereken nokta
 (N,M), orduların olabilecek en hızlı şekilde gitmesi istendiği için
-sadece (x+1,y) ya da (x,y+1) hareketlerini yapabilirler.
+sadece sağa ya da aşağı doğru hareket edebilirler.
 II- Fethedilen şehirlere asker bırakılması gerekeceği için iki ordu
-toplamda en fazla D tane şehir fethedebilir.
+ toplamda en fazla F tane şehir fethedebilir.
 III- İki ordunun yolu, kuşatılacak yere gelene kadar kesişemez.
 
 Başlangıçtan bitiş noktasına kaç farklı şekilde gidilebileceğini bulun.
-Cevap çok büyük çıkabileceği için cevabın verilen S sayısına göre
-modunu bastırın.
+ve P sayısına göre modunu bastırın.
 
 Input:
-İlk satır test case sayısı T.
-Sonraki T satır;
-Her test case in ilk satırı 5 tane N,M,C,D,S tamsayıları,
+5 farklı input senaryosu verilecektir.
+Her senaryonun ilk satırı 5 tane N,M,S,f,P tamsayıları,
 sırasıyla satır ve sütun sayısı, toplam şehir sayısı, fethedilebilecek
 şehir sayısı, mod sayısı.
-Test case için sonraki C satır ise şehirlerin koordinatları xi,yi.
+Sonraki S satır ise şehirlerin koordinatları xi,yi(koordinatlar harita alanı içerisindedir).
 
 Output:
-Her testcase için bir satır, gidilebilecek farklı yol sayısı.
+Her senaryo için bir satır, gidilebilecek farklı yol sayısı.
 
 Constraints:
-2 ≤ N, M ≤ 105
-0 ≤ D ≤ C ≤ min(200, N * M - 2)
-1 ≤ xi ≤ N
-1 ≤ yi ≤ M
-1 ≤ S ≤ 109
+2 ≤ N, M ≤ 10^5
+0 ≤ F ≤ S ≤ 200
+1 ≤ P ≤ 10^9
