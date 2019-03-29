@@ -1,0 +1,21 @@
+﻿Bir evde $N$ kadar kat ve bu katlarda toplamda $M$ adet yürüyen merdiven bulunur (Tek yönlü). Bu yollarda hareket ettigimizde başladıgımız kata asla geri dönemeyiz. Eğer bir kata çıkaran merdiven yoksa o kata büyülü kat, eğer bir kattan indiren merdiven yoksa o kata lanetli kat denir.
+Bazı katlar hem lanetli hem büyülüdür.
+
+Bu evdeki 2 kapıcı; Tarık ve Okan lanetli ve büyülü katları kendi içinde $1$ den $k$ ya kadar numaralandırmıştır.<br>
+Bu kapıcılar bütün büyülü katlardan bütün lanetli katlara olan $k$ adet yolu gruplamışlardır. Bu $k$ adet yol hiçbir katta kesişmemelidir. Bu durumda her lanetli kapıdan büyülü kapıya bir adet yol vardır. Bir grup diğer grupta bulunmayan bir yolu bulundurursa farklı sayılır. $i$ indeksli lanetli kapı $f(i)$ indeksli büyülü kapıya yol oldugunu varsayalım. $i$ ve $j$ indeksli ikilileri aldığımızda eğer $i < j$ ve $f(i) > f(j)$ ise bu durum tehlikeli sayılır. Bir gruptaki bütün muhtemel indeks ikililerinde toplamda olan tehlikeli durum sayısı tekse Tarık Okan'a bir gayme verir, değilse Okan Tarık'a bir gayme verir.
+Kaybeden kazanana bir gayme verir.
+
+Tarık ve Okan'ın çok boş vakti oldugu için bütün var olan grupları bir kez seçmişlerdir. Okan'ın son durumda kaç gaymesi olduğunu $10^9+7$ 'ye modunu alıp yazdırın.
+
+
+Input Format:
+İlk satır 2 farklı tam sayı olan $N$ ve $M$ yi içerir.<br>
+Sonraki $M$ adet satır, $a$ ve $b$ ikilisi $a$'dan $b$'ye olan ikiliyi temsil eder.
+
+
+Output Format:
+Okan'ın son durumda gayme sayısını $10^9+7$ 'ye göre modunu olarak yazdırınız.
+
+Constraints:
+$1 ≤ N ≤ 500$<br>
+$0 ≤ M ≤ 10^5$<br>
