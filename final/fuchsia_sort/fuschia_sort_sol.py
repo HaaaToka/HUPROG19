@@ -2,7 +2,7 @@ n, m, k = list(map(int, input().split()))
 sums = list(map(int, input().split()))
 
 known_nums = []
-for _ in range(m - 1):
+for _ in range(k - 1):
     ind, num = list(map(int, input().split()))
     known_nums.append((ind, num))
 
