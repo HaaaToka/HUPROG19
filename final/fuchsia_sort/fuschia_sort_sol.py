@@ -52,4 +52,4 @@ def fuchsia_sort(n, m, sums, known_nums):
     return ans_arr
 
 arr = fuchsia_sort(n, k, sums, known_nums)
-#print(*arr)
+print(*arr)
