@@ -1,10 +1,10 @@
-"""n, m = list(map(int, input().split()))
+n, m, k = list(map(int, input().split()))
 sums = list(map(int, input().split()))
 
 known_nums = []
 for _ in range(m - 1):
     ind, num = list(map(int, input().split()))
-    known_nums.append((ind, num))"""
+    known_nums.append((ind, num))
 
 def fuchsia_sort(n, m, sums, known_nums):
     seen_arr = [False] * n
@@ -41,8 +41,7 @@ def fuchsia_sort(n, m, sums, known_nums):
 
     curr_num = sums[0] - sum(ans_arr[0 : m])
     ans_arr[ind - 1] = curr_num 
-    #print("anan : " + str(sum(ans_arr[0:m])))
-    #print(curr_num)
+    
 
     while ind + m <= n:
         curr_num += sums[ind] - sums[ind - 1]
@@ -52,5 +51,5 @@ def fuchsia_sort(n, m, sums, known_nums):
 
     return ans_arr
 
-#arr = fuchsia_sort(n, m, sums, known_nums)
-#print(sum(arr[0:m]))
+arr = fuchsia_sort(n, k, sums, known_nums)
+#print(*arr)
