@@ -1,31 +1,35 @@
-Daenerys Targeryan 2 büyük ordusu Dothraki'ler ve Lekesizler ile 
+Daenerys Targaryen 2 büyük ordusu Dothraki'ler ve Lekesizler ile 
 King's Landing'i kuşatmaya gidiyor. Bu orduları farklı yollardan
 göndermek isteyen Daenerys, Tyrion'dan kuşatma için orduların 
-izleyebileceği yolları bulmasını istiyor. N satır ve M
-sütundan oluşan haritada bazı noktalarda toplam S tane şehir var 
-ve şehirler fethedilmeden geçilemiyor. Daenerys'in Tyrion'a verdiği
-üç kural var:
-I- Orduların şuan bulunduğu nokta (1,1) ve gidilmesi gereken nokta
-(N,M), orduların olabilecek en hızlı şekilde gitmesi istendiği için
-sadece sağa ya da aşağı doğru hareket edebilirler.
-II- Fethedilen şehirlere asker bırakılması gerekeceği için iki ordu
- toplamda en fazla F tane şehir fethedebilir.
-III- İki ordunun yolu, kuşatılacak yere gelene kadar kesişemez.
+izleyebileceği yolları bulmasını istiyor. $N$ satır ve $M$
+sütundan oluşan haritada bazı noktalarda toplam $S$ tane şehir var 
+ve şehirler fethedilmeden geçilemiyor.
 
-Başlangıçtan bitiş noktasına kaç farklı şekilde gidilebileceğini bulun.
-ve P sayısına göre modunu bastırın.
+Daenerys'in Tyrion'a verdiği
+üç kural var:<br>
+
+- Orduların şuan bulunduğu nokta $(1,1)$ ve gidilmesi gereken nokta
+	$(N,M)$, orduların olabilecek en hızlı şekilde gitmesi istendiği için
+	sadece aşağı ya da sağa doğru hareket edebilirler.
+- Fethedilen şehirlere asker bırakılması gerekeceği için iki ordu
+	toplamda en fazla $F$ tane şehir fethedebilir.
+- İki ordunun yolu, kuşatılacak yere gelene kadar kesişemez.
+<br>
+
+Başlangıçtan bitiş noktasına kaç farklı şekilde gidilebileceğini bulun ve $P$ sayısına göre modunu bastırın.
 
 Input:
-5 farklı input senaryosu verilecektir.
-Her senaryonun ilk satırı 5 tane N,M,S,f,P tamsayıları,
+5 farklı input senaryosu verilecektir.<br>
+Her senaryonun ilk satırı 5 tane $N,M,S,F,P$ tamsayıları,
 sırasıyla satır ve sütun sayısı, toplam şehir sayısı, fethedilebilecek
-şehir sayısı, mod sayısı.
-Sonraki S satır ise şehirlerin koordinatları xi,yi(koordinatlar harita alanı içerisindedir).
+şehir sayısı, mod sayısı.<br>
+Sonraki $S$ satır ise şehirlerin koordinatları $xi,yi$ (koordinatlar harita alanı içerisindedir).<br>
+
 
 Output:
 Her senaryo için bir satır, gidilebilecek farklı yol sayısı.
 
 Constraints:
-2 ≤ N, M ≤ 10^5
-0 ≤ F ≤ S ≤ 200
-1 ≤ P ≤ 10^9
+$1 < N, M ≤ 10^5$<br>
+$0 ≤ F ≤ S ≤ 200$<br>
+$1 ≤ P ≤ 10^9$<br>
