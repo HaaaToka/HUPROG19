@@ -1,16 +1,26 @@
-Onur ve Fatih cafe'de bir masaya oturuyorlar ve masada önceden oturanların bıraktığı yarım kalmış Jenga oyununu görüyorlar.
-Yarım oyunu bitirmeye karar veren ikili oyunu hızlı bitirmek için aldığı taşları geri koymuyor. Onur bir blok çekiyor ve başlıyorlar. İkisinin de optimum hamleleri yaptığı
-düşünülürse hangisinin oyunu kazanacağını bulun.
+Onur ve Fatih cafe'de bir masaya oturuyorlar ve masada önceden oturanların bıraktığı yarım kalmış $Q$ adet Jenga oyununu görüyorlar.
+Yarım kalan oyunları bitirmeye karar veren ikili, hızlı bitirmek için çekilen blokları üste koymuyor. Onur bir blok çekiyor ve başlıyorlar. İkisinin de optimal hamleleri yaptığı
+düşünülürse her oyunu hangisinin kazanacağını bulun.<br>
 
 Bloklar gerçek Jenga'nın aksine tamamen eşit boyutta, hiçbir blokta sıkışma yok.
+
+
+Bir katın sağında ve solunda iki blok veya ortasında tek blok varsa veya üç blok da duruyorsa o kat sağlamdır. Bir katın sağlam olmama durumunda kule yıkılır.
+Çekilebilecek bütün bloklar kulenin yıkılması ile sonuçlanıyor ise bloğu çeken kişi oyunu kaybeder.<br>
+
 --------------------------------------------------------
 Input:
-Ilk satır N sıra uzunluğu
-Sonraki N satır:
-	3 karaketer, "-" orada blok olduğunu "*" ise boş olduğunu gösterir.
+Iİlk satır $Q$ farklı jenga sayısı,<br>
+Takip eden $Q$ adet;<br>
+Ilk satırında $N$ kat sayısı<br>
+Sonraki $N$ satırda;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 karakter, $"-"$ orada blok olduğunu $"*"$ ise boş olduğunu gösterir.
+--------------------------------------------------------
+Constraints:
 
-N < 10^9
+$1 \leq Q \leq 10$<br> 
+$1< N \leq 10^7$
 
 ---------------------------------------------------------
 Ouput:
-"Onur" ya da "Fatih" bastır.
+$Q$ adet jenga oyunu için kazanan kişinin adını bastırın.<br>"Onur" ya da "Fatih"
