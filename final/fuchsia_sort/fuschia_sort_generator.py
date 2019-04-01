@@ -1,21 +1,25 @@
 import random as rd
-from fuschia_sort_sol import fuchsia_sort
+from fuschias_array import fuchsia_sort
 
 
 def prng(n, exclude):
     choices = [x for x in range(1, n + 1) if x not in exclude]
     return rd.choice(choices)
 
-input_sizes = [10, 100, 100, 100, 100, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**5, 10**5, 10**5, 10**6, 10**6]
-k_sizes = [2, 17, 13, 14, 8, 56, 72, 99, 101, 342, 672, 240, 120, 78, 92, 133, 242, 562, 427, 356, 840, 257, 356, 216, 271, 302, 999, 666, 621, 987]
-for i in range(30):
+#input_sizes = [10, 100, 100, 100, 100, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**4, 10**5, 10**5, 10**5, 10**6, 10**6]
+#k_sizes = [2, 17, 13, 14, 8, 56, 72, 99, 101, 342, 672, 240, 120, 78, 92, 133, 242, 562, 427, 356, 840, 257, 356, 216, 271, 302, 999, 666, 621, 987]
+
+input_sizes = [10**7, 10**7]
+k_sizes = [rd.randint(1, 10**3), rd.randint(1, 10**3)]
+
+for i in range(2):
     fin = open("input" + str(i).zfill(2) + ".txt", "w")
     fout = open("output" + str(i).zfill(2) + ".txt", "w")
     k = k_sizes[i]
     n = input_sizes[i]
     len_of_sums = n - k + 1
-    sums = [rd.randint(k, 1000) for _ in range(len_of_sums)]
-    print(n, k, file=fin)
+    sums = [rd.randint(1, 1000) for _ in range(len_of_sums)]
+    print(n, len(sums), k, file=fin)
     print(*sums, file=fin)
     chosen = set()
     known_nums = []
@@ -26,7 +30,7 @@ for i in range(30):
             chosen.add(j + 1)
         for j in range (ind, -1, -k):
             chosen.add(j + 1)
-        number = rd.randint(k, 1000)
+        number = rd.randint(1, 1000)
         if _ == k - 2:
             print(choice, number, file=fin, end="")
         else:

@@ -1,24 +1,28 @@
-Fuşya oynadığı **n** elemanlı A dizisine pati atarak dizideki bazı sayıları etrafa saçmıştır. Fuşya çok meraklı bir kedidir ve etrafa dağıttığı sayıları yerine koyup koyamayacağını merak eder. Fuşya A dizisindeki her k boyutundaki ardışık altdizilerin toplamlarını bulunduran **m** boyutundaki S dizisini bilmektedir. Fuşya aynı zamanda çok şanslı bir kedidir çünkü diziyi **k** boyutundaki parçalara bölmeye çalıştığında etrafa saçılmayan sayıların indexlerinin (her bir parçanın ilk elemanını 0. index olarak alınınca n/k adet altdizi oluşur, oluşan parçalar aşağıdaki şekilde gözükmektedir.) birbirinden farklı olduğunu gözlemlemiştir.<br>
+Fuşya oynadığı $N$ elemanlı $A$ dizisine pati atarak dizideki bazı sayıları etrafa saçmıştır. Fuşya çok meraklı bir kedidir ve etrafa dağıttığı sayıları yerine koymak ister. Etrafa saçılmayan sayıların bulunduğu seti $B$ ile ve bu sayıların $A$ dizisindeki indislerinin bulunduğu seti ise $I$ ile ifade edelim. Fuşya $A$ dizisindeki her $k$ boyutundaki ardışık altdizilerin toplamlarını bulunduran $M$ boyutundaki $S$ dizisini bilmektedir. $S$ dizisinin her elemanı $i=1$'dan başlayıp $M$'e gidecek ($M$ dahil) şekilde aşağıdaki gibi tanımlanır: $$S_i = \sum_{j=i}^{i+k-1} A_j$$
 
-Fuşyanın oynadığı A dizisini tekrar kurmasına yardımcı olun.
+Fuşya dağılmayan sayılarının indislerinin $I$, aşağıdaki gibi bir özelliği olduğunu fark ediyor : 
 
+$$P = \{x\,|\,i \in I \enspace and \enspace 0 \leq x \leq k-1, \>\> x = i\pmod{k}\}$$
+$$|P| = k - 1$$
+
+<!--[](https://s3.amazonaws.com/hr-assets/0/1552315592-7d31686345-fuschia.png)
+Fuşyanın oynadığı $A$ dizisini tekrar kurmasına yardımcı olun.
 
 Input Formatı:
-ilk satır iki adet tam sayı n, m, k değerlerini bulunduruyor. <br>
-İkinci satır ardışık altdizilerin toplamlarını, S dizisini bulunduruyor. <br>
-Devam eden k - 1 satır ise Fuşyanın bildiği sayıları index sayı şeklinde bulundurmakta.
+İlk satır iki adet tam sayı $N$, $M$, $k$ değerlerini bulunduruyor. <br>
+İkinci satır ardışık altdizilerin toplamlarını, $S$ dizisini bulunduruyor. <br>
+Devam eden $k - 1$ satır ise Fuşyanın bildiği sayıları index, sayı $I_i$, $B_i$ şeklinde bulundurmakta.
 
 Output Formatı:
-N boyutundaki a dizisini boşluklar ile ayırarak bastırın.
+$N$ boyutundaki $A$ dizisini boşluklar ile ayırarak bastırın.
 
 Constraints:
-1 < k < 10 ^ 3 <br>
-1 < n < 10 ^ 6 <br>
-1 <= m < n <br>
-1 <= i <= n<br>
--10 ^ 6 <= a[i] <= 10 ^ 6<br>
-1 < s[i] < 10 ^ 3
-
+$1 < k < 10 ^ 3$ <br>
+$1 < N < 10 ^ 6$ <br>
+$1 \leq M < N$ <br>
+Verilen bütün diziler 1 indislidir.<br>
+$-10 ^ 6 \leq A_i \leq 10 ^ 6$<br>
+$1 \leq S_i \leq 10 ^ 3$
 Sample Input:
 
 10 3
