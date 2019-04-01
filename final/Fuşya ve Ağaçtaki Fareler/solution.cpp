@@ -83,9 +83,8 @@ inline int read(){
 	for (;ch>='0'&&ch<='9';ch=getchar()) w=w*10+ch-'0';
 	return w*f;
 }
-
 signed main(){
-	T=1;
+	T=read();
 	while (T--){
 		memset(head,0,sizeof(head));kk=0;tim1=0;
 		//scanf("%lld%lld%lld",&n,&s,&p);

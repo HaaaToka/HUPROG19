@@ -1,8 +1,5 @@
 import random as rd
 
-n = [100] * 5 + [1000] * 5 + [10000] * 5 + [10 ** 5] * 5
-s = [10] * 5 + [100] * 5 + [1000] * 5 + [10000] * 5
-
 def generate_random_tree(n):
     seen = set()
     edges = []
@@ -24,26 +21,29 @@ def get_random_pair(n):
         b = rd.randint(1, n)
     return (a, b)
 
+
+n = [100] * 5 + [1000] * 5 + [10000] * 5 + [10 ** 5] * 5
+s = [100] * 5 + [1000] * 5 + [10000] * 5 + [10 ** 5] * 5
+q = [1000] * 5 + [100] * 5 + [10] * 6 + [1] * 4
+
 # Fuschia start points
 y = [rd.randint(1, 100) for i in range(5)] + [rd.randint(1, 1000) for i in range(5)] + [rd.randint(1, 10000) for i in range(5)] + [rd.randint(1, 10 ** 5) for i in range(5)]    
 # Fuschia starting paw powers
 p = [rd.randint(1, 10 ** 7) for i in range(20)]
-print(generate_random_tree(10))
+
 #Generate inputs
-"""
 for i in range (20):
     fout = open("input/input" + str(i).zfill(2) + ".txt", "w")
-    print(n[i], y[i], p[i], file=fout)
-    edges = generate_random_tree(n[i])
-    assert(len(edges) == n[i] - 1)
-    for edge in edges:
-        print(edge[0], edge[1], file=fout)
+    print(q[i], file=fout)
+    n_m_queries = [n[i] for x in range(q[i])]
+    for j in range(q[i]):
+        print(n_m_queries[j], y[i], p[i], file=fout)
+        edges = generate_random_tree(n_m_queries[j])
+        assert(len(edges) == n_m_queries[j] - 1)
+        for edge in edges:
+            print(edge[0], edge[1], file=fout)
 
-    print(s[i], file=fout)
-    for _ in range(s[i]):
-        pair = get_random_pair(n[i])
-        print(pair[0], pair[1], rd.randint(1, 10 ** 7), rd.randint(1, 10 ** 7), file=fout)
-        """
-    
-    
-    
+        print(n_m_queries[j], file=fout)
+        for _ in range(n_m_queries[j]):
+            pair = get_random_pair(n_m_queries[j])
+            print(pair[0], pair[1], rd.randint(1, 10 ** 7), rd.randint(1, 10 ** 7), file=fout)
