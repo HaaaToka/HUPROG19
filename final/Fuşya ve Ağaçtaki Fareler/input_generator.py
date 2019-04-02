@@ -22,19 +22,20 @@ def get_random_pair(n):
     return (a, b)
 
 
-n = [100] * 5 + [1000] * 5 + [10000] * 5 + [10 ** 5] * 5
-s = [100] * 5 + [1000] * 5 + [10000] * 5 + [10 ** 5] * 5
-q = [1000] * 5 + [100] * 5 + [10] * 6 + [1] * 4
+n = [100] * 5 + [1000] * 5 + [10000] * 5 + [2*10 ** 5] * 5
+s = [100] * 5 + [1000] * 5 + [10000] * 5 + [2*10 ** 5] * 5
+q = [1]*20 #[10] * 15 + [2] * 5
 
 # Fuschia start points
 y = [rd.randint(1, 100) for i in range(5)] + [rd.randint(1, 1000) for i in range(5)] + [rd.randint(1, 10000) for i in range(5)] + [rd.randint(1, 10 ** 5) for i in range(5)]    
 # Fuschia starting paw powers
-p = [rd.randint(1, 10 ** 7) for i in range(20)]
+p = [rd.randint(10, 10 ** 7) for i in range(20)]
 
 #Generate inputs
-for i in range (20):
+for i in range (16,20):
+    print(i," input hazirlaniyor",q[i],n[i],y[i],p[i])
     fout = open("input/input" + str(i).zfill(2) + ".txt", "w")
-    print(q[i], file=fout)
+    # print(q[i], file=fout)
     n_m_queries = [n[i] for x in range(q[i])]
     for j in range(q[i]):
         print(n_m_queries[j], y[i], p[i], file=fout)
@@ -46,4 +47,4 @@ for i in range (20):
         print(n_m_queries[j], file=fout)
         for _ in range(n_m_queries[j]):
             pair = get_random_pair(n_m_queries[j])
-            print(pair[0], pair[1], rd.randint(1, 10 ** 7), rd.randint(1, 10 ** 7), file=fout)
+            print(pair[0], pair[1], rd.randint(1, 10 ** 5), rd.randint(-10**2, 10 ** 3), file=fout)
