@@ -1,27 +1,27 @@
-Daenerys Targaryen wants to surround the King's Landing with her
-2 great army Dotrhaki and Unsullied. 2 armies is on Winterfell right now.
-Daenerys wants to send these armies using non crossing two paths
-and gives orders to Tyrion about finding these paths. There is a map with
-N rows and M columns and there are S cities on some cells which can not be
+Daenerys Targaryen wants to siege the King's Landing with her
+two great army Dotrhaki and Unsullied. Two armies are in Winterfell in the beginning.
+Daenerys wants to send these armies using non-crossing two paths
+and she gives orders to Tyrion about finding these paths. There is a map with
+N rows and M columns and there are S cities on some points(N_i,M_j) which can not be
 passed without conquering them.
 
 Daenerys have 3 rules about paths:
-- Since Winterfell is at (1,1) and target is (N,M), armies can only move
-one down cell or one right cell each time because they must arrive to the
+- Since Winterfell is at (1,1) and target is at (N,M), armies can only move
+one point down or one point right each time because they must arrive to the
 target as soon as possible.
-- If a city is conquered, army must left some soldiers there to take care of
-city and Daenerys doesn't want to lose too much power on the road so there can be
+- If a city is conquered, armies must leave some soldiers to take care of the
+city and Daenerys doesn't want to lose too much soldiers on the road so there can be
 at most F cities conquered.
-- 2 armies path must not intersect anywere until King's Landing.
+- Two armies' path must not intersect on any point until King's Landing.
 
-Find out how many different ways are there to go to King's Landing from Winterfell
-with 2 armies and print the output modulo P.
+Find out how many different ways there are to go to King's Landing from Winterfell
+with two armies and print the output modulo P.
 -------------------------------------------------------
 Input:
 There are 5 different input scenarios.
 For every scenerio; first line contains 5 different integers N,M,S,F,P
-the number of rows and columns, total number of cities in map(excluding Winterfell and
-King's Landing), number of cities that can be conquered, modulo.
+The number of rows and columns, total number of cities in map(excluding Winterfell and
+King's Landing), number of cities that can be conquered, modulo respectively.
 Next S line contains coordinates of cities.
 
 --------------------------------------------------------
