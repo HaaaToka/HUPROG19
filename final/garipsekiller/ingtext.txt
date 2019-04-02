@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+\title{Garip Sekiller}
+\date{}
+
+
+
+\begin{document}
+\maketitle
+
+You have a rectangular board consisting of $n \times m$ squares.
+Each square contains a character which is either ``\texttt{*}'', ``\texttt{+}'', or ``\texttt{.}''.
+
+A tromino is a figure formed by a square of the board, called the center, and two other squares, each sharing an edge with the center.
+A tromino is L-shaped if these two squares have a common vertex, and I-shaped otherwise.
+\newline
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{angle-beats-21$linux/trominos.jpg}
+\end{figure}
+
+\newline
+
+You can draw some disjoint trominoes on the board.
+The center of an I-shaped tromino must contain ``\texttt{+}''.
+The center of an L-shaped tromino must contain either ``\texttt{*}'' or ``\texttt{+}''.
+All non-center squares of all trominoes must contain ``\texttt{.}''.
+
+Your goal is to draw the maximum number of non-intersecting polyominoes.
+
+\newline
+\subsection*{Input Format:}
+
+The first line contains two integers $n$ and $m$: the number of rows and columns of the board ($2 \leq n, m \leq 100$).
+
+Each of the next $n$ lines contains $m$ characters, and each character is either ``\texttt{*}'', ``\texttt{+}'', or ``\texttt{.}''.
+Together, these lines describe the board.
+
+\newline
+\subsection*{Constraints:}
+
+$2 \leq n,m \leq 100$
+
+\newline
+\subsection*{Output Format:}
+
+Print $n$ lines, each containing $m$ characters: the board with trominoes on it.
+If a square belongs to some tromino, output a lowercase English letter, and if not, output the character contained in this square.
+Squares of the same tromino must contain the same letter.
+Squares which share an edge and belong to different trominoes must contain different letters.
+
+If there are several possible answers, print any one of them.
+\newline\newline\newline\newline
+\subsection*{Explanations:}
+
+\subsubsection*{Input 1}
+*. \newline
+..
+
+\subsubsection*{Output 1}
+aa \newline
+a.
+
+\subsubsection*{Input 2}
+3 3 \newline
+...\newline
+.*.\newline
+...
+
+\subsubsection*{Output 2}
+.a.\newline
+aa.\newline
+...
+
+\subsubsection*{Input 3}
+5 5\newline
++*..+\newline
+..++.\newline
+.+.++\newline
+.**.+\newline
+.+*.+
+
+\subsubsection*{Output 3}
++*baa\newline
+.bb+a\newline
+ccc++\newline
+.**.+\newline
+.+*.+
+
+
+\end{document}

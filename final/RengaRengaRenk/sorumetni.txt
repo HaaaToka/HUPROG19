@@ -1,0 +1,26 @@
+Sincan'da $N$ tane bina vardır. $N$ bina aşağıdaki kurala göre birbirine bağlıdır:
+
+- Tüm binalar arasından seçilen herhangi $7$ bina grubuna $A$ dersek. Öyle iki bina vardır ki  $a, b \in A$, ve öyle bir bina vardır $c \notin A$
+ ve binalar arasındanki bağlantıları kullanarak $a$'dan $b$'ye giden tüm yollar $c$ binasından geçmek zorundadır.
+
+Sincan belediye başkanının tüm binaları kaç farklı  $1,2,3,...,n$ renge boyayabileceğini bulmasına yardım edin.
+Sonucu bastırırken 998244353 sayısına göre modunu alınız.
+
+Belediye başkanı, Sincan'ın $k$ renge boyanması için her binaya $1$'den $k$'ya kadar farklı renkleri temsil eden tam sayıları vermiştir.
+Birbiriyle bağlı olan iki bina aynı renk olamaz.
+
+
+
+Input Format:
+İlk satırda boşlukla ayrılmış şekilde bina sayısı $N$ ve binalar arasındaki bağlantı sayısı $M$ veriliyor.<br>
+Takip eden $M$ satırda $a_i$ ve $b_i$ veriliyor. $(a \leq a_i,b_i \leq N$ ve $a_i \neq b_i)$
+Sincan'daki binalar arasında çoklu bağlantı yoktur.
+
+Constraints:
+$1 \leq N, M \leq 10^5$
+
+
+Output Format:
+Boşlukla ayrılmış şekilde $n$ adet tam sayı yazdırın.
+Her $i$'ninci tam sayı, tüm binaları $i$ tane farklı rengi kullanarak kaç farklı şekilde boyayabileceğimizdir.
+Kaç farklı yol olduğunu yazdırırken $998244353$'e göre modunu alıp yazdırın.
