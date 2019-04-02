@@ -1,0 +1,28 @@
+Onur and Fatih wants sit some time in a cafe and they see Q half jenga in tables. They decide to finish
+these games and for ending games fastly, they don't put the blocks which they have pulled to the top.
+Onur makes the first move.
+Find the winner of each game if we assume both of them does optimal moves.
+
+Unlike the original Jenga, the blocks are all equal sized and there is no extra pressure on some blocks.
+
+If there are two blocks in left and right of layer, just one block on middle or three blocks on the same layer
+the layer is stable. In the condition of one layer is not stable the tower collapses.
+
+If all possible moves lead to collapse, the person who does the move lose that game.
+-------------------------------------------------------------------------------
+Input:
+First line the number of different tables Q.
+Following Q line:
+	First line N, number of layers.
+	Next N line contains 3 characters; "-" means there is a block there, "*" means that place is empty.
+
+
+---------------------------------------------------------------------------------
+Constraints:
+1 <= Q <= 10
+1 <= N <= 10^7
+
+----------------------------------------------------------------------------------
+Output:
+Q line of output for names of winning person, "Onur" or "Fatih".
+
