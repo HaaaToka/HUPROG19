@@ -5,7 +5,7 @@ Trimino, 2 karesi merkez kareyle kenar paylaşan, 3 kareden oluşan şekle veril
 Trimino 2 farklı şekle sahiptir. Merkez kareyle kenar paylaşan karelerin ortak
 bir köşesi var ise L şeklinde, yok ise I şeklindedir.
 
-<Sekiller>
+![image](https://s3.amazonaws.com/hr-assets/0/1554219793-7eccfdae9f-trominos.jpg)
 
 Tahtaya birbiriyle çakışmayan triminolar çizebilirsiniz.
 I şeklindeki triminoların merkez karesinde "$+$" bulunmak zorundayken
@@ -40,6 +40,7 @@ Birden fazla cevap olduğu durumda herhangi birini bastırınız.
 
 
 Sample Input1:
+2 2
 *.
 ..
 
@@ -49,6 +50,7 @@ a.
 
 
 Sample Input2:
+3 3
 ...
 .*.
 ...
@@ -60,27 +62,16 @@ aa.
 
 
 Sample Input3:
-.............
-.+++....+++..
-....+..+.....
-....+..+.....
-....+..+.....
-.+++....+++..
-....+......+.
-....+......+.
-....+......+.
-.+++....+++..
-.............
+5 5
++*..+
+..++.
+.+.++
+.**.+
+.+*.+
 
 Sample Output3:
-.abc....abc..
-aabcc..aabcc.
-..baaacccb...
-...dddeee....
-.abfffgggbc..
-aab+a..aabcc.
-..baa...abaaa
-...ccc....ddd
-.abddd..abccc
-aabee..aabee.
-..be.....be..
++*baa
+.bb+a
+ccc++
+.**.+
+.+*.+
