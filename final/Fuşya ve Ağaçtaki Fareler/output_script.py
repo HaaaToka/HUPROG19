@@ -11,7 +11,7 @@ os.system(compile_str)
     output = subprocess.check_output([run_str], stdin=fin)
     print(*(str(output)[2:-1]).split("\\r\\n"), sep="\n", file=fout)"""
 
-fin = open("ex_input.txt", "r")
+fin = open("sample.txt", "r")
 
 
 output = subprocess.check_output([run_str], stdin=fin)
