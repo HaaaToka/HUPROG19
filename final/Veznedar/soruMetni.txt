@@ -1,0 +1,20 @@
+Napolyon, Fransa Merkez Bankası'nda bir veznedardır ve rüşvet almayı sever.
+Bankaya o gün gelen $N$ müşteri sıradadır.
+Napolyon bu işte yıllardır çalıştığından sıradaki hangi müşterinin en çok parası olanı bilmektedir.
+Her rüşvetçi gibi Napolyon da çok parası olana öncelik vermeyi sever.
+Eğer sırası gelen müşteri, en çok parası olan müşteri değilse Napolyon onu sıranın en sonuna gönderir.
+Sıradaki en zengin müşteri en öne geldiğinde, Napolyon en zengin müşteri için kaç kişiyi sıranın sonuna gönderdiyse o kadar gayme rüşvet alır.
+Ayrıca işlem yaptığı her kişiden gayme işlem bedeli alır.
+
+
+
+Input Format:
+İlk satır $N$, sıradaki müşteri sayısı. <br>
+İkinci satır, boşlukla ayrılmış $N$ tane tamsayı. Müşterilerin zenginlik seviyesi.
+
+Constraints:
+1 $\leq$ $N$ $\leq$ $10^5$ <br>
+1 $\leq$ Bir müşterinin para katsayısı $\leq$ $10^5$
+
+Output Format:
+Napolyon'un kazandığı toplam gaymeyi bastırın.
