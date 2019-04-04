@@ -3,38 +3,30 @@ from math import ceil,floor
 from operator import itemgetter
 
 n=int(input().strip())
-txt=input().strip()
+txt="<"
+txt+=input().strip()
 
+def tp():
+    return [0,0]
 
-basbit=defaultdict(int)
-tekrar=defaultdict(int)
+AB=defaultdict(tp)
 
-for i in range(n):
+for i in range(1,n+1):
     temp=""+txt[i]
-    tekrar[temp]+=1
-    basbit[temp]+=i+floor((i-i)/2)
-    for k in range(i+1,n):
+    AB[temp][1]+=1
+    AB[temp][0]+=i+floor((i-i)/2)
+    for k in range(i+1,n+1):
         temp+=txt[k]
-        tekrar[temp] += 1
-        basbit[temp]+=i+floor((k-i)/2)
+        AB[temp][1] += 1
+        AB[temp][0] += i + floor((k - i) / 2)
 
-#print(basbit,"\n\n",tekrar)
 
-srt=sorted(basbit.items(),key=itemgetter(1),reverse=True)
-#print(srt)
+srt=sorted(AB.values(),key=itemgetter(0,1))
 
-zp=""
-for key,value in srt:
-    zp+=str(value)
-#print(zp)
-
-def zipper(tex):
-    ans=""+tex[0]
-    cr=tex[0]
-    for i in range(1,len(tex)):
-        if cr!=tex[i]:
-            cr=tex[i]
-            ans+=tex[i]
-    return ans
-
-print("---------",zipper(zp))
+zp=str(srt[0][1])
+cur=srt[0][1]
+for key,value in srt[1:]:
+    if cur!=value:
+        zp+=str(value)
+        cur=value
+print(zp)
