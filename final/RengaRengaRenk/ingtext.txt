@@ -10,24 +10,29 @@
 
 \begin{document}
 \maketitle
-There are N buildings in Sincan which connect with following property.
 
-For any subset $A$ of $7$ buildings of all buildings, there are some two buildings $a,b \in A$, and some building $c \notin A$ such that all paths from $a$ to $b$ contain building $c$.
+You have an undirected graph with the following property:
 
-You will help the prime minister of Sincan to find the number of ways to properly color these buildings in $1,2...,n$ colors modulo $998244353$
+For any subset $A$ of $7$ vertices of the graph, there are some two vertices $a, b \in A$ and some vertex $c \notin A$ such that all paths from $a$ to $b$ contain vertex $c$.
 
-All buildings are colored in $k$ colors by assigning an integer from $1$ to $k$ to every building.
-If any two buildings are connected, their colors must be different.
+You need to find the number of ways to properly color this graph in $1, 2, \ldots, n$ colors modulo $998\,244\,353$.
+
+A graph is colored in $k$ colors by assigning an integer color from $1$ to $k$ to every vertex.
+A coloring is proper if the endpoints of each edge in the graph have different colors.
+
 
 \newline
 \subsection*{Input Format:}
-The first line of the input contains two integers $n$ and $m$: the number of building and the number of connections in Sincan.
 
-The next $m$ lines contain description of the connections of the Sincan.
-Each of these lines contains two integers $a_i$ and $b_i$ describing an connection between buildings $a_i$ and $b_i$.
-There are no multiple connections.
+The first line of the input contains two integers $n$ and $m$: the number of vertices and the number of edges in your graph.
 
-It is guaranteed that for any subset $A$ of $7$ buildings of the Sincan, there are some two buildings $a, b \in A$ and some building $c \notin A$ such that all paths from $a$ to $b$ contain building $c$.
+The next $m$ lines contain description of the edges of the graph.
+Each of these lines contains two integers $a_i$ and $b_i$ describing an edge between vertices $a_i$ and $b_i$.
+There are no multiple edges.
+
+It is guaranteed that for any subset $A$ of $7$ vertices of the graph, there are some two vertices $a, b \in A$ and some vertex $c \notin A$ such that all paths from $a$ to $b$ contain vertex $c$.
+
+
 
 
 \newline
@@ -37,8 +42,10 @@ $1 \leq a_i, b_i \leq n$, $a_i \neq b_i$
 
 \newline
 \subsection*{Output Format:}
+
 Print one line containing $n$ space-separated integers.
-The $i$-th integer must be the number of ways to properly color the Sincan in $i$ colors, taken modulo $998244353$.
+The $i$-th integer must be the number of ways to properly color this graph in $i$ colors, taken modulo $998\,244\,353$.
+
 
 
 \subsection*{Explanations:}
@@ -47,12 +54,7 @@ The $i$-th integer must be the number of ways to properly color the Sincan in $i
 3 1 \newline
 1 2
 \subsubsection*{Output 1}
-0 4 18
-
-%\begin{figure}[h]
-%\includegraphics[width=8cm]{angle-beats-21$linux/sincan.png}
-%\end{figure}
-
+0 4 18 
 
 
 \end{document}
