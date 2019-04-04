@@ -5,7 +5,7 @@ Bu evdeki 2 kapıcı; Tarık ve Okan lanetli ve büyülü katları kendi içinde
 Bu kapıcılar bütün büyülü katlardan bütün lanetli katlara olan $k$ adet yolu gruplamışlardır. Bu $k$ adet yol hiçbir katta kesişmemelidir. Bu durumda her lanetli kapıdan büyülü kapıya bir adet yol vardır. Bir grup diğer grupta bulunmayan bir yolu bulundurursa farklı sayılır. $i$ indeksli lanetli kapı $f(i)$ indeksli büyülü kapıya yol oldugunu varsayalım. $i$ ve $j$ indeksli ikilileri aldığımızda eğer $i < j$ ve $f(i) > f(j)$ ise bu durum tehlikeli sayılır. Bir gruptaki bütün muhtemel indeks ikililerinde toplamda olan tehlikeli durum sayısı tekse Tarık Okan'a bir gayme verir, değilse Okan Tarık'a bir gayme verir.
 Kaybeden kazanana bir gayme verir.
 
-Tarık ve Okan'ın çok boş vakti oldugu için bütün var olan grupları bir kez seçmişlerdir. Okan'ın son durumda kaç gaymesi olduğunu $10^9+7$ 'ye modunu alıp yazdırın.
+Tarık ve Okan'ın çok boş vakti oldugu için bütün var olan grupları bir kez seçmişlerdir. Okan'ın son durumda kaç gaymesi olduğunu $10^9+7$ 'ye göre modunu alıp yazdırın.
 
 
 Input Format:
@@ -19,3 +19,43 @@ Okan'ın son durumda gayme sayısını $10^9+7$ 'ye göre modunu olarak yazdır�
 Constraints:
 $1 ≤ N ≤ 500$<br>
 $0 ≤ M ≤ 10^5$<br>
+
+
+
+Sample Input 1:
+6 2
+6 1
+3 5
+
+Sample Output 1:
+1
+
+Explanation 1:
+![image](https://s3.amazonaws.com/hr-assets/0/1554380122-620a08bb10-sample.png)
+Bu örnekte 4 adet $[1,\, 2,\, 4,\, 5]$ lanetli, 4 adette $[2,\, 3,\, 4,\, 6]$ büyülü kat vardır.
+Elemanları $(6 \,\to\, 1), (3 \,\to\, 5), (2 \,\to\, 2), (4 \,\to\, 4)$ bu grup için 4 adet tehlikeli durum vardır. Bu yüzden Tarık Okan'a 1 gayme verir.
+
+
+Sample Input 2:
+5 4
+3 1
+3 5
+4 1
+4 5
+
+Sample Output 2:
+0
+
+Explanation 2:
+Bu örnekte 2 farklı 3 elemanlı grup vardır. Bu durumda bir kez Tarık Okan'a gayme verir. Bir kez Okan Tarık'a gayme verir.
+
+
+Sample Input 3:
+3 1
+1 3
+
+Sample Output 3:
+1000000006
+
+Explanation 3:
+Bu örnekte 2 farklı 3 elemanlı grup vardır. Bu durumda bir kez Tarık Okan'a gayme verir. Bir kez Okan Tarık'a gayme verir. Okan'ın -1 gaymesi var.
