@@ -84,7 +84,7 @@ inline int read(){
 	return w*f;
 }
 signed main(){
-	T=read();
+	T=1;
 	while (T--){
 		memset(head,0,sizeof(head));kk=0;tim1=0;
 		//scanf("%lld%lld%lld",&n,&s,&p);
