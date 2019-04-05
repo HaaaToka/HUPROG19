@@ -32,7 +32,7 @@ y = [rd.randint(1, 100) for i in range(5)] + [rd.randint(1, 1000) for i in range
 p = [rd.randint(10, 10 ** 7) for i in range(20)]
 
 #Generate inputs
-for i in range (16,20):
+for i in range (20):
     print(i," input hazirlaniyor",q[i],n[i],y[i],p[i])
     fout = open("input/input" + str(i).zfill(2) + ".txt", "w")
     # print(q[i], file=fout)
