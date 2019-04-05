@@ -1,277 +1,284 @@
-#define ONLINE_JUDGE
-#include<bits/stdc++.h>
-
-#define HEAP priority_queue
-#define rep(i, n) for(int i = 0, _end_ = (n); i < _end_; ++i)
-#define per(i, n) for(int i = (n) - 1; i >= 0 ; --i)
-#define forn(i, l, r) for(int i = (l), _end_ = (r); i <= _end_; ++i)
-#define nrof(i, r, l) for(int i = (r), _end_ = (l); i >= _end_; --i)
-#define FOR(a, b) for(auto (a): (b))
-#define mp make_pair
-#define mt make_tuple
-#define pb push_back
-#define X first
-#define Y second
-#define eps 1e-6
-#define pi 3.1415926535897932384626433832795
-#define SZ(x) (int)x.size()
-#define ALL(x) x.begin(), x.end()
-#define FILL(a, b) memset((a), (b), sizeof((a)))
-#define MCPY(a, b) memcpy((a), (b), sizeof((b)))
-
-using namespace std;
-
-typedef long long LL;
-typedef double flt;
-typedef vector<int> vi;
-typedef vector<LL> vl;
-typedef pair<int,int> pii;
-typedef pair<int,LL> pil;
-typedef pair<LL,int> pli;
-typedef pair<LL,LL> pll;
-typedef vector<pil> vil;
-typedef vector<pii> vii;
-typedef vector<pli> vli;
-typedef vector<pll> vll;
-
-const int iinf = 1e9 + 7;
-const int oo = 0x3f3f3f3f;
-const LL linf = 1ll << 60;
-const flt dinf = 1e60;
-
-template <typename T>
-inline void scf(T &x)
-{
-    bool f = 0; x = 0; char c = getchar();
-    while((c < '0' || c > '9') && c != '-') c = getchar();
-    if(c == '-') { f = 1; c = getchar(); }
-    while(c >= '0' && c <= '9') { x = x * 10 + c - '0'; c = getchar(); }
-    if(f) x = -x; return;
-}
-template <typename T1, typename T2>
-void scf(T1 &x, T2 &y) { scf(x); return scf(y); }
-template <typename T1, typename T2, typename T3>
-void scf(T1 &x, T2 &y, T3 &z) { scf(x); scf(y); return scf(z); }
-template <typename T1, typename T2, typename T3, typename T4>
-void scf(T1 &x, T2 &y, T3 &z, T4 &w) { scf(x); scf(y); scf(z); return scf(w); }
-
-inline char mygetchar(){ char c = getchar(); while(c == ' ' || c == '\n') c = getchar(); return c; }
-
-template <typename T> inline bool chkmax(T &x, const T &y){ return y > x ? x = y, 1 : 0; }
-template <typename T> inline bool chkmin(T &x, const T &y){ return y < x ? x = y, 1 : 0; }
-
-#ifdef ONLINE_JUDGE
-#define debug(...) ;
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+#include <set>
+#include <map>
+#include <queue>
+#include <iostream>
+#include <sstream>
+#include <cstdio>
+#include <cmath>
+#include <ctime>
+#include <cstring>
+#include <cctype>
+#include <cassert>
+#include <limits>
+#include <functional>
+#define rep(i,n) for(int (i)=0;(i)<(int)(n);++(i))
+#define rer(i,l,u) for(int (i)=(int)(l);(i)<=(int)(u);++(i))
+#define reu(i,l,u) for(int (i)=(int)(l);(i)<(int)(u);++(i))
+#if defined(_MSC_VER) || __cplusplus > 199711L
+#define aut(r,v) auto r = (v)
 #else
-#define debug(...) fprintf(stderr, __VA_ARGS__)
-#define DEBUG
+#define aut(r,v) __typeof(v) r = (v)
 #endif
+#define each(it,o) for(aut(it, (o).begin()); it != (o).end(); ++ it)
+#define all(o) (o).begin(), (o).end()
+#define pb(x) push_back(x)
+#define mp(x,y) make_pair((x),(y))
+#define mset(m,v) memset(m,v,sizeof(m))
+#define INF 0x3f3f3f3f
+#define INFL 0x3f3f3f3f3f3f3f3fLL
+using namespace std;
+typedef vector<int> vi; typedef pair<int, int> pii; typedef vector<pair<int, int> > vpii; typedef long long ll;
+template<typename T, typename U> inline void amin(T &x, U y) { if (y < x) x = y; }
+template<typename T, typename U> inline void amax(T &x, U y) { if (x < y) x = y; }
 
-//---------------------------------------------------------head----------------------------------------------------
+struct BinCoeffPrimePower {
+    vector<int> fact;        //(x!)_p
+    vector<int> factinv;    //fact[x]^{-1} mod P
 
-void judge()
-{
-//    freopen("grid.in", "r", stdin);
-//    freopen("grid.out", "w", stdout);
-    return;
-}
+    void init(int maxN_, int p_, int q_) {
+        assert(1 < p_ && 1 <= q_);
+        p = p_, q = q_;
+        P = p; for (int k = 1; k < q; ++k) P *= p;
+        int maxN = min(max(0, maxN_), P - 1);
 
-const int maxw = 2e5 + 100;
-
-const int maxn = 233;
-
-const int maxm = 12;
-
-int H, W, n, m, K, Mod;
-int p[maxm], q[maxm], x[maxn], y[maxn], mod[maxm], id[maxn];
-pii fac[maxw][maxm];
-int dp[maxn][maxn], f1[maxn][maxn], f2[maxn][maxn], f3[maxn][maxn], f4[maxn][maxn], pd[maxn][maxn];
-bool flag[maxn];
-
-#ifdef DEBUG
-int CC[200][200];
-#endif
-
-inline void ext_gcd(LL a, LL &x, LL b, LL &y)
-{
-    if(!b)
-    {
-        x = 1; y = 0;
-        return;
-    }
-    ext_gcd(b, y, a % b, x);
-    y -= (a / b) * x;
-    return;
-}
-
-inline int inv(int n, int mod)
-{
-    LL x, y;
-    ext_gcd(n, x, mod, y);
-    return ((x % mod) + mod) % mod;
-}
-
-inline int pow_mod(int x, int n, const int &mod)
-{
-    int y = 1;
-    while(n)
-    {
-        if(n & 1) y = 1ll * y * x % mod;
-        x = 1ll * x * x % mod;
-        n >>= 1;
-    }
-    return y;
-}
-
-void get_mod()
-{
-    int mod; scf(mod);
-    Mod = mod;
-    m = 0;
-    for(int i = 2; i * i <= mod; ++i) if(mod % i == 0)
-    {
-        p[m] = i; q[m] = 0; ::mod[m] = mod;
-        while(mod % i == 0) mod /= i, ++q[m];
-        ::mod[m] /= mod;
-        ++m;
-    }
-    if(mod > 1) p[m] = mod, q[m] = 1, ::mod[m] = mod, ++m;
-    return;
-}
-
-void pre()
-{
-    rep(m, ::m)
-    {
-        fac[0][m] = mp(1, 0);
-        forn(i, 1, H + W)
-        {
-            int x = i, y = 0;
-            while(x % p[m] == 0) x /= p[m], ++y;
-            fac[i][m] = mp(1ll * fac[i - 1][m].X * x % mod[m], fac[i - 1][m].Y + y);
+        fact.resize(maxN + 1);
+        fact[0] = 1;
+        for (int x = 1; x <= maxN; ++x) {
+            fact[x] = x % p == 0 ? fact[x - 1] : mul(fact[x - 1], x);
+        }
+        factinv.resize(maxN + 1);
+        factinv[maxN] = inverse(fact[maxN]);
+        for (int x = maxN; x >= 1; --x) {
+            factinv[x - 1] = x % p == 0 ? factinv[x] : mul(factinv[x], x);
         }
     }
-    return;
+
+    int getP() const { return P; }
+
+    int nCr(int n, int r) const {
+        if (r > n) return 0;
+        assert(0 <= n && (n >= getP() || n < (int)fact.size()) && 0 <= r);
+
+        int z = n - r;
+
+        int e0 = 0;
+        for (int u = n / p; u > 0; u /= p) e0 += u;
+        for (int u = r / p; u > 0; u /= p) e0 -= u;
+        for (int u = z / p; u > 0; u /= p) e0 -= u;
+
+        int em = 0;
+        for (int u = n / P; u > 0; u /= p) em += u;
+        for (int u = r / P; u > 0; u /= p) em -= u;
+        for (int u = z / P; u > 0; u /= p) em -= u;
+
+        int prod = 1;
+        while (n > 0) {
+            prod = mul(prod, fact[n % P]);
+            prod = mul(prod, factinv[r % P]);
+            prod = mul(prod, factinv[z % P]);
+            n /= p, r /= p, z /= p;
+        }
+
+        if (!(p == 2 && q >= 3) && em % 2 != 0)
+            prod = P - prod;
+
+        for (int i = 0; i < e0 && i < q; ++i)
+            prod = mul(prod, p);
+
+        return prod;
+    }
+
+private:
+    int mul(int x, int y) const { return (long long)x * y % P; }
+
+    int inverse(signed a) const {
+        a %= P;
+        if (a < 0) a += P;
+        signed b = P, u = 1, v = 0;
+        while (b) {
+            signed t = a / b;
+            a -= t * b; swap(a, b);
+            u -= t * v; swap(u, v);
+        }
+        if (u < 0) u += P;
+        return u;
+    }
+
+    int p, q, P;
+};
+
+struct BinCoeff {
+    void init(int maxN, const vector<pair<int, int>> &factors) {
+        bcpps.resize(factors.size());
+        crtCoeffs.resize(factors.size());
+        int M = 1;
+        for (int i = 0; i < (int)factors.size(); ++i) {
+            bcpps[i].init(maxN, factors[i].first, factors[i].second);
+            int P = bcpps[i].getP();
+            int t, g;
+            t = exgcd(M % P, P, g);
+            assert(g == 1);
+            crtCoeffs[i] = t;
+            M *= P;
+        }
+    }
+
+    int nCr(int n, int r) const {
+        int A = 0, M = 1;
+        for (int i = 0; i < (int)crtCoeffs.size(); ++i) {
+            int P = bcpps[i].getP();
+            int a = bcpps[i].nCr(n, r);
+            int d = (a - A) % P;
+            int h = (long long)d * crtCoeffs[i] % P;
+            if (h < 0) h += P;
+            A += M * h;
+            M *= P;
+        }
+        return A;
+    }
+
+private:
+    vector<BinCoeffPrimePower> bcpps;
+    vector<int> crtCoeffs;
+
+    static int exgcd(int a, int b, int &g) {
+        int u = 1, v = 0;
+        while (b) {
+            int t = a / b;
+            a -= t * b; swap(a, b);
+            u -= t * v; swap(u, v);
+        }
+        g = a;
+        return u;
+    }
+};
+
+
+vector<bool> isprime;
+vector<int> primes;
+void sieve(int n) {
+    if ((int)isprime.size() >= n + 1) return;
+    isprime.assign(n + 1, true);
+    isprime[0] = isprime[1] = false;
+    int sqrtn = (int)(sqrt(n * 1.) + .5);
+    for (int i = 2; i <= sqrtn; i++) if (isprime[i]) {
+        for (int j = i * i; j <= n; j += i)
+            isprime[j] = false;
+    }
+    primes.clear();
+    for (int i = 2; i <= n; i++) if (isprime[i])
+        primes.push_back(i);
 }
 
-inline bool cmp(const int &i, const int &j)
-{
-    return (x[i] == x[j]) ? ((y[i] == y[j]) ? (i < j) : (y[i] > y[j])) : (x[i] > x[j]);
+typedef int FactorsInt;
+typedef vector<pair<FactorsInt, int> > Factors;
+void primeFactors(FactorsInt x, Factors &out_v) {
+    out_v.clear();
+    int sqrtx = (int)(sqrt(x*1.) + 10.5);
+    sieve(sqrtx);
+    for (vector<int>::const_iterator p = primes.begin(); p != primes.end(); ++p) {
+        if (*p > sqrtx) break;
+        if (x % *p == 0) {
+            int t = 1;
+            x /= *p;
+            while (x % *p == 0) {
+                t++;
+                x /= *p;
+            }
+            out_v.push_back(make_pair(*p, t));
+        }
+    }
+    if (x != 1) out_v.push_back(make_pair(x, 1));
 }
 
-inline int C(int N, int M)
-{
-    if(N < M || N < 0 || M < 0) return 0;
-    int ret = 0;
-    rep(i, m)
-    {
-        int r  = 1ll * fac[N][i].X * inv(fac[M][i].X, mod[i]) % mod[i] * inv(fac[N - M][i].X, mod[i]) % mod[i];
-        int y = fac[N][i].Y - fac[M][i].Y - fac[N - M][i].Y;
-        r = 1ll * r * pow_mod(p[i], y, mod[i]) % mod[i];
-        ret = (1ll * Mod / mod[i] * inv(Mod / mod[i], mod[i]) % Mod * r % Mod + ret) % Mod;
-    }
-#ifdef DEBUG
-//    debug("asserting...\n");
-    assert(CC[N][M] == ret);
-#endif
-    return ret;
-}
+struct GModInt {
+    static int Mod;
+    unsigned x;
+    GModInt() : x(0) {}
+    GModInt(signed sig) { int sigt = sig % Mod; if (sigt < 0) sigt += Mod; x = sigt; }
+    GModInt(signed long long sig) { int sigt = sig % Mod; if (sigt < 0) sigt += Mod; x = sigt; }
+    int get() const { return (int)x; }
 
-void work(int S, int T, int (&dp)[maxn][maxn])
-{
-    memset(dp, 0, sizeof dp);
-//    debug("%d\n", flag[id[T]]);
-    dp[T][flag[id[T]]] = 1;
-    int tmp;
-    forn(i, T, S - 1) forn(j, 0, K) if(tmp = dp[i][j]) forn(k, i + 1, S) dp[k][j + flag[id[k]]] = (1ll * tmp * ::dp[k][i] + dp[k][j + flag[id[k]]]) % Mod;
-    return;
-}
+    GModInt &operator+=(GModInt that) { if ((x += that.x) >= (unsigned)Mod) x -= Mod; return *this; }
+    GModInt &operator-=(GModInt that) { if ((x += Mod - that.x) >= (unsigned)Mod) x -= Mod; return *this; }
+    GModInt &operator*=(GModInt that) { x = (unsigned long long)x * that.x % Mod; return *this; }
 
-void solve()
-{
-    memset(dp, 0, sizeof dp);
-    memset(pd, 0, sizeof pd);
-    scf(H, W, n, K);
-    get_mod();
-    pre();
-#ifdef DEBUG
-    CC[0][0] = 1;
-    forn(i, 1, 199)
-    {
-        CC[i][0] = CC[i][i] = 1;
-        forn(j, 1, i - 1) CC[i][j] = (CC[i - 1][j] + CC[i - 1][j - 1]) % Mod;
-    }
-#endif
-    bool f1, f2, f3, f4; f1 = f2 = f3 = f4 = 0;
-    memset(flag, 0, sizeof flag);
-    forn(i, 1, n)
-    {
-        scf(x[i], y[i]);
-        f1 |= (x[i] == 1 && y[i] == 2);
-        f2 |= (x[i] == 2 && y[i] == 1);
-        f3 |= (x[i] == H && y[i] == W - 1);
-        f4 |= (x[i] == H - 1 && y[i] == W);
-        flag[i] = 1;
-    }
-    if(!f1)
-    {
-        ++n, x[n] = 1, y[n] = 2;
-        f2 |= (x[n] == 2 && y[n] == 1);
-        f3 |= (x[n] == H && y[n] == W - 1);
-        f4 |= (x[n] == H - 1 && y[n] == W);
-    }
-    if(!f2)
-    {
-        ++n, x[n] = 2, y[n] = 1;
-        f3 |= (x[n] == H && y[n] == W - 1);
-        f4 |= (x[n] == H - 1 && y[n] == W);
-    }
-    if(!f3)
-    {
-        ++n; x[n] = H, y[n] = W - 1;
-        f4 |= (x[n] == H - 1 && y[n] == W);
-    }
-    if(!f4) ++n, x[n] = H - 1, y[n] = W;
-    forn(i, 1, n) id[i] = i;
-    sort(id + 1, id + n + 1, cmp);
-//    forn(i, 1, n) printf("%d %d\n", x[id[i]], y[id[i]]);
-    forn(I, 1, n) nrof(J, I - 1, 1)
-    {
-        int i = id[I], j = id[J];
-        pd[I][J] = (x[i] <= x[j] && y[i] <= y[j]) ? C(x[j] - x[i] + y[j] - y[i], x[j] - x[i]) : 0;
-    }
-    forn(I, 1, n) nrof(J, I - 1, 1)
-    {
-        dp[I][J] = pd[I][J];
-        forn(K, J + 1, I - 1) dp[I][J] = ((-1ll * dp[I][K] * pd[K][J] + dp[I][J]) % Mod + Mod) % Mod;
-//        if(dp[I][J]) debug("dp[%d][%d] = %d\n", I, J, dp[I][J]);
-    }
-    int i1, i2, i3, i4;
-    forn(I, 1, n)
-    {
-        int i = id[I];
-        if(x[i] == 1 && y[i] == 2) i1 = I;
-        if(x[i] == 2 && y[i] == 1) i2 = I;
-        if(x[i] == H && y[i] == W - 1) i3 = I;
-        if(x[i] == H - 1 && y[i] == W) i4 = I;
-    }
-    debug("%d %d %d %d\n", i1, i2, i3, i4);
-    work(i1, i3, ::f1);
-    work(i1, i4, ::f2);
-    work(i2, i3, ::f3);
-    work(i2, i4, ::f4);
-    int ans = 0;
-    forn(i, 0, K) forn(j, 0, K - i) ans = ((1ll * ::f2[i1][i] * ::f3[i2][j] - 1ll * ::f1[i1][i] * ::f4[i2][j] + ans) % Mod + Mod) % Mod;
-    printf("%d\n", ans);
-    return;
-}
+    GModInt operator+(GModInt that) const { return GModInt(*this) += that; }
+    GModInt operator-(GModInt that) const { return GModInt(*this) -= that; }
+    GModInt operator*(GModInt that) const { return GModInt(*this) *= that; }
+};
+int GModInt::Mod = 0;
+typedef GModInt mint;
 
-int main()
-{
-#ifdef ONLINE_JUDGE
-    judge();
-#endif
-    int T=5;
-    forn(tc, 1, T) solve();
+int main() {
+    sieve(32000);
+    BinCoeff bc;
+
+    for (int ii = 0; ii < 5; ++ii) {
+        int N; int M;
+        scanf("%d%d", &N, &M);
+        int S; int F;
+        scanf("%d%d", &S, &F);
+        int MOD;
+        scanf("%d", &MOD);
+        mint::Mod = MOD;
+        {
+            Factors factors;
+            primeFactors(MOD, factors);
+            bc.init(N + M, factors);
+        }
+        vector<pair<int, int> > carrots(S);
+        for (int i = 0; i < S; ++i) {
+            scanf("%d%d", &carrots[i].first, &carrots[i].second);
+            --carrots[i].first, --carrots[i].second;
+        }
+        sort(all(carrots));
+        carrots.insert(carrots.begin(), make_pair(0, 1));
+        carrots.insert(carrots.begin() + 1, make_pair(1, 0));
+        carrots.insert(carrots.end(), make_pair(N - 2, M - 1));
+        carrots.insert(carrots.end(), make_pair(N - 1, M - 2));
+        vector<vector<mint>> combs(S + 4, vector<mint>(S + 4));
+        rep(i, S + 4) reu(j, i + 1, S + 4) {
+            int x = carrots[j].first - carrots[i].first;
+            int y = carrots[j].second - carrots[i].second;
+            if (x >= 0 && y >= 0)
+                combs[i][j] = bc.nCr(x + y, x);
+        }
+
+        vector<vector<mint>> ways(S + 4, vector<mint>(S + 4));
+        rep(i, S + 4) {
+            ways[i][i] = 1;
+            reu(j, i + 1, S + 4) {
+                mint x = combs[i][j];
+                reu(k, i + 1, j)
+                    x -= ways[i][k] * combs[k][j];
+                ways[i][j] = x;
+            }
+        }
+        vector<vector<mint>> dp1(S + 4, vector<mint>(F + 2)), dp2 = dp1;
+        dp1[0][0] = dp2[1][0] = 1;
+        rep(i, S + 4) reu(k, i + 1, S + 4) {
+            mint mul = ways[i][k];
+            if (mul.x == 0) continue;
+            rer(j, 0, F) {
+                dp1[k][j + 1] += dp1[i][j] * mul;
+                dp2[k][j + 1] += dp2[i][j] * mul;
+            }
+        }
+        mint ans;
+        rer(d, 0, F) rer(e, 0, F - d) {
+            mint a = dp1[S + 2][d + 1];
+            mint b = dp1[S + 3][d + 1];
+            mint c = dp2[S + 2][e + 1];
+            mint d = dp2[S + 3][e + 1];
+            mint det = a * d - b * c;
+            ans += det;
+        }
+        printf("%d\n", ans.get());
+    }
     return 0;
 }
