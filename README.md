@@ -5,4 +5,5 @@ A repo which includes the **HUPROG'19**(Hacettepe University Programming Contest
 [Link to HUPROG'19 Qualification Round](https://www.hackerrank.com/huprog19-oneleme)
 
 [Link to HUPROG'19 Final Round](https://www.hackerrank.com/huprog19-final)
-![HUPROG LOGO](/logo.png)
+
+![](/logo.png)
